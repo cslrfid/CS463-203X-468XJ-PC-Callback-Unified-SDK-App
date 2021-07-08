@@ -11,7 +11,7 @@ using System.Reflection;
 
 namespace CS203_CALLBACK_API_DEMO
 {
-    public partial class WriteAllBank : UserControl
+    public partial class WriteAllBankforASCIIEPC : UserControl
     {
         public enum WriteState
         {
@@ -259,7 +259,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         #endregion
 
-        public WriteAllBank()
+        public WriteAllBankforASCIIEPC()
         {
             InitializeComponent();
 
@@ -381,7 +381,6 @@ namespace CS203_CALLBACK_API_DEMO
             }
         }
         #endregion
-
        
     }
 }

@@ -95,6 +95,24 @@
     <Compile Include="ControlPanelwithAsyncGpio.Designer.cs">
       <DependentUpon>ControlPanelwithAsyncGpio.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustControl\WriteAllBankforASCIIEPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustControl\WriteAllBankforASCIIEPC.designer.cs">
+      <DependentUpon>WriteAllBankforASCIIEPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustControl\ReadAllBankforASCIIEPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustControl\ReadAllBankforASCIIEPC.Designer.cs">
+      <DependentUpon>ReadAllBankforASCIIEPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEPCASCIIReadWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEPCASCIIReadWrite.designer.cs">
+      <DependentUpon>FormEPCASCIIReadWrite.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustControl\AntennaSeqTabPage.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -663,6 +681,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlPanelwithAsyncGpio.resx">
       <DependentUpon>ControlPanelwithAsyncGpio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustControl\WriteAllBankforASCIIEPC.resx">
+      <DependentUpon>WriteAllBankforASCIIEPC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustControl\ReadAllBankforASCIIEPC.resx">
+      <DependentUpon>ReadAllBankforASCIIEPC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEPCASCIIReadWrite.resx">
+      <DependentUpon>FormEPCASCIIReadWrite.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLargeReadWrite.resx">

@@ -78,6 +78,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.button13 = new System.Windows.Forms.Button();
             this.buttonOnOffTest = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +126,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.btn_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_back.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btn_back.Location = new System.Drawing.Point(3, 425);
+            this.btn_back.Location = new System.Drawing.Point(3, 466);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(112, 27);
             this.btn_back.TabIndex = 6;
@@ -138,7 +139,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.btn_setup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_setup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btn_setup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btn_setup.Location = new System.Drawing.Point(3, 388);
+            this.btn_setup.Location = new System.Drawing.Point(3, 429);
             this.btn_setup.Name = "btn_setup";
             this.btn_setup.Size = new System.Drawing.Size(112, 27);
             this.btn_setup.TabIndex = 5;
@@ -263,7 +264,7 @@ namespace CS203_CALLBACK_API_DEMO
             // pb_logo
             // 
             this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
-            this.pb_logo.Location = new System.Drawing.Point(267, 388);
+            this.pb_logo.Location = new System.Drawing.Point(267, 429);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(209, 71);
             this.pb_logo.TabIndex = 12;
@@ -649,13 +650,27 @@ namespace CS203_CALLBACK_API_DEMO
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.LightGreen;
+            this.button15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button15.Location = new System.Drawing.Point(3, 365);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(112, 27);
+            this.button15.TabIndex = 42;
+            this.button15.Text = "ASCII R/W";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(547, 471);
+            this.ClientSize = new System.Drawing.Size(547, 500);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.buttonOnOffTest);
             this.Controls.Add(this.button13);
@@ -770,5 +785,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button buttonOnOffTest;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
     }
 }
