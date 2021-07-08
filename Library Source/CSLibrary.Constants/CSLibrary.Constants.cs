@@ -532,6 +532,14 @@ namespace CSLibrary.Constants
         /// </summary>
         HK,
         /// <summary>
+        /// Hong Kong (8 Channels)
+        /// </summary>
+        HK8,
+        /// <summary>
+        /// Hong Kong (50 Channels)
+        /// </summary>
+        HK50,
+        /// <summary>
         /// Japan
         /// </summary>
         JP,

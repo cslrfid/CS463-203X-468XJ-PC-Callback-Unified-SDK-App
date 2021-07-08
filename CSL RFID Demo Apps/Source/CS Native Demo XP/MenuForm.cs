@@ -525,5 +525,19 @@ namespace CS203_CALLBACK_API_DEMO
             this.Show();
 
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (Program.appSetting.tagGroup.selected != CSLibrary.Constants.Selected.ALL)
+                MessageBox.Show("Warning : MASK IS SET !!!");
+
+            this.Hide();
+            using (FormEPCASCIIReadWrite rw = new FormEPCASCIIReadWrite())
+            {
+                rw.ShowDialog();
+            }
+            UpdatePower();
+            this.Show();
+        }
     }
 }
