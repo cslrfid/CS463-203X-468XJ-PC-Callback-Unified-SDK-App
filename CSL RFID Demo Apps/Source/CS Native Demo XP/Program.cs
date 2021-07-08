@@ -304,6 +304,24 @@ DEINIT:
                 appSetting.Region = ReaderXP.SelectedRegionCode;
             }
 
+            appSetting.Singulation = SingulationAlgorithm.DYNAMICQ;
+
+            if (ReaderXP.SetSingulationAlgorithmParms(appSetting.Singulation, appSetting.SingulationAlg) != Result.OK)
+            {
+                MessageBox.Show(String.Format("GetCurrentSingulationAlgorithm rc = {0}", ReaderXP.LastResultCode));
+                Application.Exit();
+                return false;
+            }
+            if (ReaderXP.SetCurrentSingulationAlgorithm(appSetting.Singulation) != Result.OK)
+            {
+                MessageBox.Show(String.Format("SetCurrentSingulationAlgorithm rc = {0}", ReaderXP.LastResultCode));
+                Application.Exit();
+                return false;
+            }
+
+
+
+/*
             if (ReaderXP.GetCurrentSingulationAlgorithm(ref sing) != Result.OK)
             {
                 MessageBox.Show(String.Format("GetCurrentSingulationAlgorithm rc = {0}", ReaderXP.LastResultCode));
@@ -318,7 +336,7 @@ DEINIT:
                 Application.Exit();
                 return false;
             }
-
+*/
             appSetting.AntennaList = AntennaList.DEFAULT_ANTENNA_LIST;
 
             if (Program.ReaderXP.OEMDeviceType == Machine.CS203X)

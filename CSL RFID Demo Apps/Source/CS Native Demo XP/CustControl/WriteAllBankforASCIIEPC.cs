@@ -263,7 +263,7 @@ namespace CS203_CALLBACK_API_DEMO
         {
             InitializeComponent();
 
-            this.Size = new Size(306, 160);
+            //this.Size = new Size(306, 160);
 
             try
             {
@@ -381,6 +381,23 @@ namespace CS203_CALLBACK_API_DEMO
             }
         }
         #endregion
-       
+
+        private void tb_epc_TextChanged(object sender, EventArgs e)
+        {
+            lb_epcraw.Text = "";
+
+            for (int cnt = 0; cnt < tb_epc.Text.Length; cnt++)
+                lb_epcraw.Text += ((byte)tb_epc.Text[cnt]).ToString("X02");
+        }
+
+        private void tb_user_TextChanged(object sender, EventArgs e)
+        {
+            lb_userraw.Text = "";
+
+            for (int cnt = 0; cnt < tb_user.Text.Length; cnt++)
+                lb_userraw.Text += ((byte)tb_user.Text[cnt]).ToString("X02");
+
+        }
+
     }
 }

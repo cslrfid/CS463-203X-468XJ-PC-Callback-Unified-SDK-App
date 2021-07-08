@@ -345,6 +345,7 @@ namespace CS203_CALLBACK_API_DEMO
 
                         m_readAllBank.pc = m_record.pc.ToString();
                         m_readAllBank.epc = Decode2String (value);
+                        m_readAllBank.epcraw = m_record.epc.ToString();
                     }
                     break;
                 case Opts.TAG_WRITE:

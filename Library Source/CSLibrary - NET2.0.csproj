@@ -11,8 +11,8 @@
     <RootNamespace>CSLibrary</RootNamespace>
     <AssemblyName>CSLibrary</AssemblyName>
     <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\carls\Documents\GitHub\CSL-Callback-Unified-SDK-App\Backup3\</UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>C:\Users\carls\Documents\GitHub\CSL-Callback-Unified-SDK-App\Backup\</UpgradeBackupLocation>
+    <OldToolsVersion>15.0</OldToolsVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\CSLibrary.snk</AssemblyOriginatorKeyFile>
