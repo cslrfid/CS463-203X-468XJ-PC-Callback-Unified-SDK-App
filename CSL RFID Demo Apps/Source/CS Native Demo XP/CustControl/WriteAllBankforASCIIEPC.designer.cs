@@ -78,7 +78,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.cb_userbank.Name = "cb_userbank";
             this.cb_userbank.Size = new System.Drawing.Size(97, 16);
             this.cb_userbank.TabIndex = 0;
-            this.cb_userbank.Text = "USER/ASCII";
+            this.cb_userbank.Text = "USER/ASCII*";
             // 
             // label3
             // 
@@ -103,9 +103,9 @@ namespace CS203_CALLBACK_API_DEMO
             this.cb_epc.Font = new System.Drawing.Font("Tahoma", 8F);
             this.cb_epc.Location = new System.Drawing.Point(3, 28);
             this.cb_epc.Name = "cb_epc";
-            this.cb_epc.Size = new System.Drawing.Size(81, 16);
+            this.cb_epc.Size = new System.Drawing.Size(97, 16);
             this.cb_epc.TabIndex = 19;
-            this.cb_epc.Text = "EPC/ASCII";
+            this.cb_epc.Text = "EPC/ASCII*";
             // 
             // pic_pc
             // 
@@ -222,7 +222,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_epc.BackColor = System.Drawing.Color.LightGreen;
             this.tb_epc.Font = new System.Drawing.Font("Arial", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.tb_epc.ForeColor = System.Drawing.Color.Red;
-            this.tb_epc.Location = new System.Drawing.Point(90, 22);
+            this.tb_epc.Location = new System.Drawing.Point(90, 24);
             this.tb_epc.Name = "tb_epc";
             this.tb_epc.Size = new System.Drawing.Size(188, 20);
             this.tb_epc.TabIndex = 43;

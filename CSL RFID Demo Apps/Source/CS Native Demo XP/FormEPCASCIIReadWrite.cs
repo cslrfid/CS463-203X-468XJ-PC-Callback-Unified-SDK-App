@@ -680,7 +680,7 @@ namespace CS203_CALLBACK_API_DEMO
                     Program.ReaderXP.Options.TagWriteEPC.retryCount = m_retry_cnt;
                     Program.ReaderXP.Options.TagWriteEPC.accessPassword = m_writeAllBank.AccessPwd;
                     Program.ReaderXP.Options.TagWriteEPC.offset = 0;
-                    Program.ReaderXP.Options.TagWriteEPC.count = Hex.GetWordCount(m_writeAllBank.epc);
+                    Program.ReaderXP.Options.TagWriteEPC.count = (UInt16)((m_writeAllBank.epc.Length + 1) / 2);
                     Program.ReaderXP.Options.TagWriteEPC.epc = new S_EPC(Encode2Hex(m_writeAllBank.epc));
 
                     if (Program.ReaderXP.StartOperation(Operation.TAG_WRITE_EPC, true) == Result.OK)

@@ -37,13 +37,14 @@ namespace CS203_CALLBACK_API_DEMO
             this.lb_clear = new System.Windows.Forms.LinkLabel();
             this.tb_entertag = new Custom.Control.HexOnlyTextbox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.m_readAllBank = new CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC();
             this.lb_ReadInfo = new System.Windows.Forms.Label();
             this.btn_readallbank = new System.Windows.Forms.Button();
+            this.m_readAllBank = new CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.m_writeAllBank = new CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC();
+            this.label2 = new System.Windows.Forms.Label();
             this.lb_WriteInfo = new System.Windows.Forms.Label();
             this.btn_writeallbank = new System.Windows.Forms.Button();
+            this.m_writeAllBank = new CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -69,7 +70,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tc_readAndWrite.Location = new System.Drawing.Point(0, 0);
             this.tc_readAndWrite.Name = "tc_readAndWrite";
             this.tc_readAndWrite.SelectedIndex = 0;
-            this.tc_readAndWrite.Size = new System.Drawing.Size(340, 240);
+            this.tc_readAndWrite.Size = new System.Drawing.Size(350, 280);
             this.tc_readAndWrite.TabIndex = 0;
             this.tc_readAndWrite.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -84,15 +85,14 @@ namespace CS203_CALLBACK_API_DEMO
             this.tabPage1.Controls.Add(this.tb_entertag);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(332, 214);
+            this.tabPage1.Size = new System.Drawing.Size(342, 254);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "1.Select Tag";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBoxEPCOffset
             // 
             this.textBoxEPCOffset.BackColor = System.Drawing.Color.LightGreen;
-            this.textBoxEPCOffset.Location = new System.Drawing.Point(147, 189);
+            this.textBoxEPCOffset.Location = new System.Drawing.Point(152, 227);
             this.textBoxEPCOffset.Name = "textBoxEPCOffset";
             this.textBoxEPCOffset.Size = new System.Drawing.Size(36, 22);
             this.textBoxEPCOffset.TabIndex = 6;
@@ -101,7 +101,7 @@ namespace CS203_CALLBACK_API_DEMO
             // labelEPCOffset
             // 
             this.labelEPCOffset.AutoSize = true;
-            this.labelEPCOffset.Location = new System.Drawing.Point(84, 194);
+            this.labelEPCOffset.Location = new System.Drawing.Point(89, 232);
             this.labelEPCOffset.Name = "labelEPCOffset";
             this.labelEPCOffset.Size = new System.Drawing.Size(57, 12);
             this.labelEPCOffset.TabIndex = 5;
@@ -126,14 +126,14 @@ namespace CS203_CALLBACK_API_DEMO
             this.nTable1.FocusCellBackColor = System.Drawing.Color.Black;
             this.nTable1.FocusCellForeColor = System.Drawing.Color.White;
             this.nTable1.LeftHeader = false;
-            this.nTable1.Location = new System.Drawing.Point(3, 3);
+            this.nTable1.Location = new System.Drawing.Point(0, 3);
             this.nTable1.MultipleSelection = false;
             this.nTable1.Name = "nTable1";
             this.nTable1.SelectionBackColor = System.Drawing.Color.DarkOrange;
             this.nTable1.SelectionForeColor = System.Drawing.Color.Black;
             this.nTable1.ShowSplitterValue = true;
             this.nTable1.ShowStartSplitter = true;
-            this.nTable1.Size = new System.Drawing.Size(329, 156);
+            this.nTable1.Size = new System.Drawing.Size(339, 194);
             this.nTable1.SplitterColor = System.Drawing.Color.Red;
             this.nTable1.SplitterMode = CSLibrary.Windows.UI.NTableSplitterMode.Default;
             this.nTable1.SplitterStartColor = System.Drawing.Color.Brown;
@@ -146,7 +146,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_search.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_search.Location = new System.Drawing.Point(3, 165);
+            this.btn_search.Location = new System.Drawing.Point(8, 203);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(72, 43);
             this.btn_search.TabIndex = 3;
@@ -156,7 +156,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             // lb_clear
             // 
-            this.lb_clear.Location = new System.Drawing.Point(276, 176);
+            this.lb_clear.Location = new System.Drawing.Point(281, 214);
             this.lb_clear.Name = "lb_clear";
             this.lb_clear.Size = new System.Drawing.Size(33, 20);
             this.lb_clear.TabIndex = 2;
@@ -170,7 +170,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_entertag.BackgroundText = "Please type your EPC here!";
             this.tb_entertag.FontColor = System.Drawing.Color.Black;
             this.tb_entertag.ForeColor = System.Drawing.Color.Gray;
-            this.tb_entertag.Location = new System.Drawing.Point(81, 165);
+            this.tb_entertag.Location = new System.Drawing.Point(86, 203);
             this.tb_entertag.MaxLength = 24;
             this.tb_entertag.Name = "tb_entertag";
             this.tb_entertag.PaddingZero = true;
@@ -181,41 +181,15 @@ namespace CS203_CALLBACK_API_DEMO
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPage5.Controls.Add(this.m_readAllBank);
             this.tabPage5.Controls.Add(this.lb_ReadInfo);
             this.tabPage5.Controls.Add(this.btn_readallbank);
+            this.tabPage5.Controls.Add(this.m_readAllBank);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(332, 214);
+            this.tabPage5.Size = new System.Drawing.Size(342, 254);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "2.Read/Decode Tag";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // m_readAllBank
-            // 
-            this.m_readAllBank.AccPwd = "FFFFFFFF";
-            this.m_readAllBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.m_readAllBank.epc = "FFFF-FFFF-FFFF-FFFF-FFFF-FFFF";
-            this.m_readAllBank.IconAcc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.IconEpc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.IconKill = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.IconPc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.IconTid = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.IconUser = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
-            this.m_readAllBank.KillPwd = "FFFFFFFF";
-            this.m_readAllBank.Location = new System.Drawing.Point(3, 3);
-            this.m_readAllBank.Name = "m_readAllBank";
-            this.m_readAllBank.pc = "FFFF";
-            this.m_readAllBank.ReadAccPwd = true;
-            this.m_readAllBank.ReadEpc = true;
-            this.m_readAllBank.ReadKillPwd = true;
-            this.m_readAllBank.ReadPc = true;
-            this.m_readAllBank.ReadTid = true;
-            this.m_readAllBank.ReadUserBank = true;
-            this.m_readAllBank.Size = new System.Drawing.Size(326, 180);
-            this.m_readAllBank.TabIndex = 2;
-            this.m_readAllBank.Tid = "FFFFFFFF";
-            this.m_readAllBank.UserMem = "FFFFFFFF";
             // 
             // lb_ReadInfo
             // 
@@ -238,40 +212,57 @@ namespace CS203_CALLBACK_API_DEMO
             this.btn_readallbank.UseVisualStyleBackColor = false;
             this.btn_readallbank.Click += new System.EventHandler(this.btn_readallbank_Click);
             // 
+            // m_readAllBank
+            // 
+            this.m_readAllBank.AccPwd = "FFFFFFFF";
+            this.m_readAllBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.m_readAllBank.epc = "FFFF-FFFF-FFFF-FFFF-FFFF-FFFF";
+            this.m_readAllBank.IconAcc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.IconEpc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.IconKill = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.IconPc = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.IconTid = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.IconUser = CS203_CALLBACK_API_DEMO.ReadAllBankforASCIIEPC.ReadState.UNKNOWN;
+            this.m_readAllBank.KillPwd = "FFFFFFFF";
+            this.m_readAllBank.Location = new System.Drawing.Point(3, 3);
+            this.m_readAllBank.Name = "m_readAllBank";
+            this.m_readAllBank.pc = "FFFF";
+            this.m_readAllBank.ReadAccPwd = true;
+            this.m_readAllBank.ReadEpc = true;
+            this.m_readAllBank.ReadKillPwd = true;
+            this.m_readAllBank.ReadPc = true;
+            this.m_readAllBank.ReadTid = true;
+            this.m_readAllBank.ReadUserBank = true;
+            this.m_readAllBank.Size = new System.Drawing.Size(326, 243);
+            this.m_readAllBank.TabIndex = 2;
+            this.m_readAllBank.Tid = "FFFFFFFF";
+            this.m_readAllBank.UserMem = "FFFFFFFF";
+            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tabPage6.Controls.Add(this.m_writeAllBank);
+            this.tabPage6.Controls.Add(this.label2);
             this.tabPage6.Controls.Add(this.lb_WriteInfo);
             this.tabPage6.Controls.Add(this.btn_writeallbank);
+            this.tabPage6.Controls.Add(this.m_writeAllBank);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(332, 214);
+            this.tabPage6.Size = new System.Drawing.Size(342, 254);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "3.Write/Encode Tag";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // m_writeAllBank
+            // label2
             // 
-            this.m_writeAllBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.m_writeAllBank.epc = "";
-            this.m_writeAllBank.IconAcc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
-            this.m_writeAllBank.IconEpc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
-            this.m_writeAllBank.IconKill = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
-            this.m_writeAllBank.IconPc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
-            this.m_writeAllBank.IconUser = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
-            this.m_writeAllBank.Location = new System.Drawing.Point(3, 3);
-            this.m_writeAllBank.Name = "m_writeAllBank";
-            this.m_writeAllBank.OffsetUser = ((ushort)(0));
-            this.m_writeAllBank.pc = "";
-            this.m_writeAllBank.Size = new System.Drawing.Size(326, 180);
-            this.m_writeAllBank.TabIndex = 3;
-            this.m_writeAllBank.WordUser = ((ushort)(1));
-            this.m_writeAllBank.WriteAccPwd = false;
-            this.m_writeAllBank.WriteEPC = false;
-            this.m_writeAllBank.WriteKillPwd = false;
-            this.m_writeAllBank.WritePC = false;
-            this.m_writeAllBank.WriteUser = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.ImageKey = "(none)";
+            this.label2.Location = new System.Drawing.Point(3, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(323, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "* WARNING : only accept even number characters in ASCII format";
             // 
             // lb_WriteInfo
             // 
@@ -294,13 +285,35 @@ namespace CS203_CALLBACK_API_DEMO
             this.btn_writeallbank.UseVisualStyleBackColor = false;
             this.btn_writeallbank.Click += new System.EventHandler(this.btn_writeAllbank_Click);
             // 
+            // m_writeAllBank
+            // 
+            this.m_writeAllBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.m_writeAllBank.epc = "";
+            this.m_writeAllBank.IconAcc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
+            this.m_writeAllBank.IconEpc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
+            this.m_writeAllBank.IconKill = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
+            this.m_writeAllBank.IconPc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
+            this.m_writeAllBank.IconUser = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
+            this.m_writeAllBank.Location = new System.Drawing.Point(3, 3);
+            this.m_writeAllBank.Name = "m_writeAllBank";
+            this.m_writeAllBank.OffsetUser = ((ushort)(0));
+            this.m_writeAllBank.pc = "";
+            this.m_writeAllBank.Size = new System.Drawing.Size(336, 248);
+            this.m_writeAllBank.TabIndex = 3;
+            this.m_writeAllBank.WordUser = ((ushort)(1));
+            this.m_writeAllBank.WriteAccPwd = false;
+            this.m_writeAllBank.WriteEPC = false;
+            this.m_writeAllBank.WriteKillPwd = false;
+            this.m_writeAllBank.WritePC = false;
+            this.m_writeAllBank.WriteUser = false;
+            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(312, 214);
+            this.tabPage4.Size = new System.Drawing.Size(342, 254);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Exit";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -386,7 +399,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(340, 240);
+            this.ClientSize = new System.Drawing.Size(350, 280);
             this.ControlBox = false;
             this.Controls.Add(this.tc_readAndWrite);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -400,6 +413,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tabPage1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -431,5 +445,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.TextBox textBoxEPCOffset;
         private ReadAllBankforASCIIEPC m_readAllBank;
         private WriteAllBankforASCIIEPC m_writeAllBank;
+        private System.Windows.Forms.Label label2;
     }
 }
