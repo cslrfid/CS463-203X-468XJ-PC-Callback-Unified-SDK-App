@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library Source\CSLibrary.Comm\CodeFileComm.cs">
+    <Files>
+      <File FileName="Library Source\CSLibrary.Comm\CodeFileComm.cs" Line="736" Column="22" />
+      <File FileName="Library Source\CSLibrary.Comm\CodeFileCommUSB.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Customer Demo Program - PC" expanded="True">
+            <Node name="CSL Callback Demo VS2008" selected="True" />
+          </Node>
+          <Node name="Library" expanded="True">
+            <Node name="CSLibrary" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

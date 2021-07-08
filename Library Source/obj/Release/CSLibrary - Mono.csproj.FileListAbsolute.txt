@@ -1,0 +1,9 @@
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Linux\CSLibrary.dll.config
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Linux\CSLibrary.dll
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Linux\CSLibrary.pdb
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Mono\CSLibrary.dll.config
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Mono\CSLibrary.dll
+D:\Mephist\RFID Project - NEW\CSL RFID Demo Apps\Release Libraries\Mono\CSLibrary.pdb

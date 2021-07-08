@@ -1,0 +1,60 @@
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+\\Water-hp\d$\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+\\Water-hp\d$\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+\\Water-hp\d$\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+\\Water-hp\d$\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+\\Water-hp\d$\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+\\Water-hp\D\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+\\Water-hp\D\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+\\Water-hp\D\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+\\Water-hp\D\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+\\Water-hp\D\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+\\WATER-HP\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+\\WATER-HP\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+\\WATER-HP\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+\\WATER-HP\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+\\WATER-HP\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+C:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+C:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+C:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+C:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+C:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\Backup\DriverD-20170413\Mephist\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\Backup\DriverD-20170413 - Copy\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\Backup\DriverD-20170413 - Copy\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\Backup\DriverD-20170413 - Copy\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\Backup\DriverD-20170413 - Copy\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\Backup\DriverD-20170413 - Copy\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\Backup\DriverD-20190213\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\Backup\DriverD-20190213\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\Backup\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\Backup\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\Backup\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\OldProject\DriverD-20190213\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\OldProject\DriverD-20190213\RFID Project - NEW\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\OldProject\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\OldProject\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\CSLibrary.dll
+D:\OldProject\DriverD-20190213\RFID Project - NEW\Library Source\obj\Release\CSLibrary.pdb
+D:\OldProject\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+D:\OldProject\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+D:\OldProject\CSL RFID Demo Apps w Library\Library Source\obj\Release\ResolveAssemblyReference.cache
+D:\OldProject\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.dll
+D:\OldProject\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.pdb
+W:\CSL RFID Demo Apps w Library\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+W:\CSL RFID Demo Apps w Library\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+W:\CSL RFID Demo Apps w Library\CSL RFID Demo Apps w Library\Library Source\obj\Release\ResolveAssemblyReference.cache
+W:\CSL RFID Demo Apps w Library\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.dll
+W:\CSL RFID Demo Apps w Library\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.pdb
+C:\Projects\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.dll
+C:\Projects\CSL RFID Demo Apps w Library\CS101 Demo Apps\Release Libraries\WindowsCE\NET3.5\CSLibrary.pdb
+C:\Projects\CSL RFID Demo Apps w Library\Library Source\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.dll
+C:\Projects\CSL RFID Demo Apps w Library\Library Source\obj\Release\CSLibrary.pdb
