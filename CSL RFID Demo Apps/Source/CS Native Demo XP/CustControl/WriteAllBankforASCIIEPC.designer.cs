@@ -41,11 +41,11 @@ namespace CS203_CALLBACK_API_DEMO
             this.pic_epc = new System.Windows.Forms.PictureBox();
             this.cfg_user = new System.Windows.Forms.LinkLabel();
             this.hexOnlyTextbox1 = new Custom.Control.HexOnlyTextbox();
-            this.tb_epc = new Custom.Control.HexOnlyTextbox();
-            this.tb_user = new Custom.Control.HexOnlyTextbox();
             this.tb_killpwd = new Custom.Control.HexOnlyTextbox();
             this.tb_accpwd = new Custom.Control.HexOnlyTextbox();
             this.tb_pc = new Custom.Control.HexOnlyTextbox();
+            this.tb_epc = new System.Windows.Forms.TextBox();
+            this.tb_user = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_kill)).BeginInit();
@@ -173,36 +173,6 @@ namespace CS203_CALLBACK_API_DEMO
             this.hexOnlyTextbox1.TabIndex = 35;
             this.hexOnlyTextbox1.Text = "00000000";
             // 
-            // tb_epc
-            // 
-            this.tb_epc.BackColor = System.Drawing.Color.LightGreen;
-            this.tb_epc.BackgroundText = "EPC";
-            this.tb_epc.Font = new System.Drawing.Font("Arial", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.tb_epc.FontColor = System.Drawing.Color.Red;
-            this.tb_epc.ForeColor = System.Drawing.Color.Red;
-            this.tb_epc.Location = new System.Drawing.Point(90, 25);
-            this.tb_epc.MaxLength = 24;
-            this.tb_epc.Name = "tb_epc";
-            this.tb_epc.PaddingZero = true;
-            this.tb_epc.Size = new System.Drawing.Size(191, 20);
-            this.tb_epc.TabIndex = 16;
-            // 
-            // tb_user
-            // 
-            this.tb_user.BackColor = System.Drawing.Color.LightGreen;
-            this.tb_user.BackgroundText = "USER";
-            this.tb_user.Font = new System.Drawing.Font("Arial", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.tb_user.FontColor = System.Drawing.Color.Red;
-            this.tb_user.ForeColor = System.Drawing.Color.Red;
-            this.tb_user.Location = new System.Drawing.Point(6, 112);
-            this.tb_user.MaxLength = 4;
-            this.tb_user.Multiline = true;
-            this.tb_user.Name = "tb_user";
-            this.tb_user.PaddingZero = true;
-            this.tb_user.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_user.Size = new System.Drawing.Size(300, 36);
-            this.tb_user.TabIndex = 17;
-            // 
             // tb_killpwd
             // 
             this.tb_killpwd.BackColor = System.Drawing.Color.LightPink;
@@ -247,11 +217,37 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_pc.Size = new System.Drawing.Size(64, 20);
             this.tb_pc.TabIndex = 15;
             // 
+            // tb_epc
+            // 
+            this.tb_epc.BackColor = System.Drawing.Color.LightGreen;
+            this.tb_epc.Font = new System.Drawing.Font("Arial", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.tb_epc.ForeColor = System.Drawing.Color.Red;
+            this.tb_epc.Location = new System.Drawing.Point(90, 22);
+            this.tb_epc.Name = "tb_epc";
+            this.tb_epc.Size = new System.Drawing.Size(188, 20);
+            this.tb_epc.TabIndex = 43;
+            this.tb_epc.Text = "EPC";
+            // 
+            // tb_user
+            // 
+            this.tb_user.BackColor = System.Drawing.Color.LightGreen;
+            this.tb_user.Font = new System.Drawing.Font("Arial", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.tb_user.ForeColor = System.Drawing.Color.Red;
+            this.tb_user.Location = new System.Drawing.Point(3, 112);
+            this.tb_user.Multiline = true;
+            this.tb_user.Name = "tb_user";
+            this.tb_user.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_user.Size = new System.Drawing.Size(300, 36);
+            this.tb_user.TabIndex = 44;
+            this.tb_user.Text = "USER";
+            // 
             // WriteAllBankforASCIIEPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.tb_user);
+            this.Controls.Add(this.tb_epc);
             this.Controls.Add(this.cfg_user);
             this.Controls.Add(this.hexOnlyTextbox1);
             this.Controls.Add(this.pic_pc);
@@ -260,10 +256,8 @@ namespace CS203_CALLBACK_API_DEMO
             this.Controls.Add(this.pic_acc);
             this.Controls.Add(this.pic_epc);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_epc);
             this.Controls.Add(this.cb_epc);
             this.Controls.Add(this.cb_pc);
-            this.Controls.Add(this.tb_user);
             this.Controls.Add(this.tb_killpwd);
             this.Controls.Add(this.tb_accpwd);
             this.Controls.Add(this.tb_pc);
@@ -289,7 +283,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.CheckBox cb_userbank;
         private System.Windows.Forms.Label label3;
         private Custom.Control.HexOnlyTextbox tb_pc;
-        private Custom.Control.HexOnlyTextbox tb_epc;
         private Custom.Control.HexOnlyTextbox tb_accpwd;
         private Custom.Control.HexOnlyTextbox tb_killpwd;
         private System.Windows.Forms.CheckBox cb_pc;
@@ -301,6 +294,7 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.PictureBox pic_epc;
         private System.Windows.Forms.LinkLabel cfg_user;
         private Custom.Control.HexOnlyTextbox hexOnlyTextbox1;
-        private Custom.Control.HexOnlyTextbox tb_user;
+        private System.Windows.Forms.TextBox tb_epc;
+        private System.Windows.Forms.TextBox tb_user;
     }
 }
