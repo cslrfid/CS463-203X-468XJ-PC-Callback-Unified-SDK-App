@@ -50,6 +50,11 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_killpwd = new Custom.Control.HexOnlyTextbox();
             this.tb_accpwd = new Custom.Control.HexOnlyTextbox();
             this.tb_pc = new Custom.Control.HexOnlyTextbox();
+            this.l_pc_result = new System.Windows.Forms.Label();
+            this.l_epc_result = new System.Windows.Forms.Label();
+            this.l_acc_result = new System.Windows.Forms.Label();
+            this.l_kill_result = new System.Windows.Forms.Label();
+            this.l_user_result = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_kill)).BeginInit();
@@ -289,11 +294,61 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_pc.Size = new System.Drawing.Size(64, 32);
             this.tb_pc.TabIndex = 15;
             // 
+            // l_pc_result
+            // 
+            this.l_pc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_pc_result.Location = new System.Drawing.Point(570, 14);
+            this.l_pc_result.Name = "l_pc_result";
+            this.l_pc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_pc_result.TabIndex = 49;
+            this.l_pc_result.Click += new System.EventHandler(this.l_pc_result_Click);
+            // 
+            // l_epc_result
+            // 
+            this.l_epc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_epc_result.Location = new System.Drawing.Point(570, 55);
+            this.l_epc_result.Name = "l_epc_result";
+            this.l_epc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_epc_result.TabIndex = 50;
+            this.l_epc_result.Click += new System.EventHandler(this.l_epc_result_Click);
+            // 
+            // l_acc_result
+            // 
+            this.l_acc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_acc_result.Location = new System.Drawing.Point(570, 134);
+            this.l_acc_result.Name = "l_acc_result";
+            this.l_acc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_acc_result.TabIndex = 51;
+            this.l_acc_result.Click += new System.EventHandler(this.l_acc_result_Click);
+            // 
+            // l_kill_result
+            // 
+            this.l_kill_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_kill_result.Location = new System.Drawing.Point(570, 174);
+            this.l_kill_result.Name = "l_kill_result";
+            this.l_kill_result.Size = new System.Drawing.Size(100, 30);
+            this.l_kill_result.TabIndex = 52;
+            this.l_kill_result.Click += new System.EventHandler(this.l_kill_result_Click);
+            // 
+            // l_user_result
+            // 
+            this.l_user_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_user_result.Location = new System.Drawing.Point(570, 245);
+            this.l_user_result.Name = "l_user_result";
+            this.l_user_result.Size = new System.Drawing.Size(100, 30);
+            this.l_user_result.TabIndex = 53;
+            this.l_user_result.Click += new System.EventHandler(this.l_user_result_Click);
+            // 
             // WriteAllBankforASCIIEPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.l_user_result);
+            this.Controls.Add(this.l_kill_result);
+            this.Controls.Add(this.l_acc_result);
+            this.Controls.Add(this.l_epc_result);
+            this.Controls.Add(this.l_pc_result);
             this.Controls.Add(this.lb_userraw);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_epcraw);
@@ -317,7 +372,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.Controls.Add(this.cb_killpwd);
             this.Controls.Add(this.cb_accpwd);
             this.Name = "WriteAllBankforASCIIEPC";
-            this.Size = new System.Drawing.Size(612, 360);
+            this.Size = new System.Drawing.Size(720, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_pc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_kill)).EndInit();
@@ -352,5 +407,10 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Label lb_epcraw;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_userraw;
+        private System.Windows.Forms.Label l_pc_result;
+        private System.Windows.Forms.Label l_epc_result;
+        private System.Windows.Forms.Label l_acc_result;
+        private System.Windows.Forms.Label l_kill_result;
+        private System.Windows.Forms.Label l_user_result;
     }
 }

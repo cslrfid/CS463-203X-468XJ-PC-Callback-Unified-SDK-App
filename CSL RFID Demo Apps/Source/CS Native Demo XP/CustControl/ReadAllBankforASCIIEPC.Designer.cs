@@ -55,6 +55,12 @@ namespace CS203_CALLBACK_API_DEMO
             this.label1 = new System.Windows.Forms.Label();
             this.lb_user = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
+            this.l_pc_result = new System.Windows.Forms.Label();
+            this.l_epc_result = new System.Windows.Forms.Label();
+            this.l_acc_result = new System.Windows.Forms.Label();
+            this.l_kill_result = new System.Windows.Forms.Label();
+            this.l_tid_result = new System.Windows.Forms.Label();
+            this.l_user_result = new System.Windows.Forms.Label();
             this.hexOnlyTextbox1 = new Custom.Control.HexOnlyTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_epc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pc)).BeginInit();
@@ -106,7 +112,7 @@ namespace CS203_CALLBACK_API_DEMO
             // cb_userbank
             // 
             this.cb_userbank.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_userbank.Location = new System.Drawing.Point(19, 255);
+            this.cb_userbank.Location = new System.Drawing.Point(13, 255);
             this.cb_userbank.Name = "cb_userbank";
             this.cb_userbank.Size = new System.Drawing.Size(135, 30);
             this.cb_userbank.TabIndex = 0;
@@ -132,7 +138,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tb_showall.Name = "tb_showall";
             this.tb_showall.ReadOnly = true;
             this.tb_showall.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_showall.Size = new System.Drawing.Size(606, 343);
+            this.tb_showall.Size = new System.Drawing.Size(711, 343);
             this.tb_showall.TabIndex = 2;
             this.tb_showall.Visible = false;
             // 
@@ -325,11 +331,59 @@ namespace CS203_CALLBACK_API_DEMO
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 295);
+            this.label2.Location = new System.Drawing.Point(28, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 30);
+            this.label2.Size = new System.Drawing.Size(127, 30);
             this.label2.TabIndex = 34;
             this.label2.Text = "USER/ASCII";
+            // 
+            // l_pc_result
+            // 
+            this.l_pc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_pc_result.Location = new System.Drawing.Point(564, 15);
+            this.l_pc_result.Name = "l_pc_result";
+            this.l_pc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_pc_result.TabIndex = 35;
+            // 
+            // l_epc_result
+            // 
+            this.l_epc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_epc_result.Location = new System.Drawing.Point(564, 55);
+            this.l_epc_result.Name = "l_epc_result";
+            this.l_epc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_epc_result.TabIndex = 36;
+            // 
+            // l_acc_result
+            // 
+            this.l_acc_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_acc_result.Location = new System.Drawing.Point(564, 135);
+            this.l_acc_result.Name = "l_acc_result";
+            this.l_acc_result.Size = new System.Drawing.Size(100, 30);
+            this.l_acc_result.TabIndex = 37;
+            // 
+            // l_kill_result
+            // 
+            this.l_kill_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_kill_result.Location = new System.Drawing.Point(564, 175);
+            this.l_kill_result.Name = "l_kill_result";
+            this.l_kill_result.Size = new System.Drawing.Size(100, 30);
+            this.l_kill_result.TabIndex = 38;
+            // 
+            // l_tid_result
+            // 
+            this.l_tid_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_tid_result.Location = new System.Drawing.Point(564, 215);
+            this.l_tid_result.Name = "l_tid_result";
+            this.l_tid_result.Size = new System.Drawing.Size(100, 30);
+            this.l_tid_result.TabIndex = 39;
+            // 
+            // l_user_result
+            // 
+            this.l_user_result.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            this.l_user_result.Location = new System.Drawing.Point(564, 255);
+            this.l_user_result.Name = "l_user_result";
+            this.l_user_result.Size = new System.Drawing.Size(100, 30);
+            this.l_user_result.TabIndex = 40;
             // 
             // hexOnlyTextbox1
             // 
@@ -352,6 +406,12 @@ namespace CS203_CALLBACK_API_DEMO
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.l_user_result);
+            this.Controls.Add(this.l_tid_result);
+            this.Controls.Add(this.l_kill_result);
+            this.Controls.Add(this.l_acc_result);
+            this.Controls.Add(this.l_epc_result);
+            this.Controls.Add(this.l_pc_result);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_user);
             this.Controls.Add(this.label1);
@@ -381,7 +441,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.Controls.Add(this.cb_accpwd);
             this.Controls.Add(this.tb_showall);
             this.Name = "ReadAllBankforASCIIEPC";
-            this.Size = new System.Drawing.Size(612, 430);
+            this.Size = new System.Drawing.Size(720, 430);
             ((System.ComponentModel.ISupportInitialize)(this.pic_epc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_acc)).EndInit();
@@ -423,5 +483,11 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lb_user;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label l_pc_result;
+        private System.Windows.Forms.Label l_epc_result;
+        private System.Windows.Forms.Label l_acc_result;
+        private System.Windows.Forms.Label l_kill_result;
+        private System.Windows.Forms.Label l_tid_result;
+        private System.Windows.Forms.Label l_user_result;
     }
 }
