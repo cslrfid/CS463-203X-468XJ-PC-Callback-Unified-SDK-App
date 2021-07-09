@@ -10,9 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSLibrary</RootNamespace>
     <AssemblyName>CSLibrary</AssemblyName>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\Users\carls\Documents\GitHub\CSL-Callback-Unified-SDK-App\Backup1\</UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>15.0</OldToolsVersion>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <SignAssembly>True</SignAssembly>
@@ -107,7 +109,11 @@
     <Compile Include="CSLibrary.Structures\CSLibrary.Structures.CoolLog.cs" />
     <Compile Include="CSLibrary.Tools\NativeRegistry.cs" />
     <Compile Include="CSLibrary.Tools\NativeSetupAPI.cs" />
-    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="CSLibrary.Constants\CSLibrary.Constants.cs" />
     <Compile Include="CSLibrary.Constants\CSLibrary.Constants.Packet.cs" />
     <Compile Include="CSLibrary.cs" />
@@ -159,7 +165,7 @@
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

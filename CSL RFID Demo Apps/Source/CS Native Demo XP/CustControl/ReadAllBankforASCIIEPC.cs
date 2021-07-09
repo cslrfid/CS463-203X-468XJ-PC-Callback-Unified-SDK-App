@@ -49,16 +49,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_pc.Image = m_bmpBuffer;
+                        l_pc_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_pc.Image = m_bmpBuffer;
+                        l_pc_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_pc.Image = m_bmpBuffer;
+                        l_pc_result.Text = "";
                         break;
                 }
             }
@@ -75,16 +78,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_epc.Image = m_bmpBuffer;
+                        l_epc_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_epc.Image = m_bmpBuffer;
+                        l_epc_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_epc.Image = m_bmpBuffer;
+                        l_epc_result.Text = "";
                         break;
                 }
             }
@@ -101,16 +107,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_acc.Image = m_bmpBuffer;
+                        l_acc_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_acc.Image = m_bmpBuffer;
+                        l_acc_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_acc.Image = m_bmpBuffer;
+                        l_acc_result.Text = "";
                         break;
                 }
             }
@@ -127,16 +136,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_kill.Image = m_bmpBuffer;
+                        l_kill_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_kill.Image = m_bmpBuffer;
+                        l_kill_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_kill.Image = m_bmpBuffer;
+                        l_kill_result.Text = "";
                         break;
                 }
             }
@@ -153,16 +165,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_tid.Image = m_bmpBuffer;
+                        l_tid_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_tid.Image = m_bmpBuffer;
+                        l_tid_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_tid.Image = m_bmpBuffer;
+                        l_tid_result.Text = "";
                         break;
                 }
             }
@@ -179,16 +194,19 @@ namespace CS203_CALLBACK_API_DEMO
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_cancel_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_user.Image = m_bmpBuffer;
+                        l_user_result.Text = "Failed";
                         break;
                     case ReadState.OK:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_accept_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_user.Image = m_bmpBuffer;
+                        l_user_result.Text = "Success";
                         break;
                     case ReadState.UNKNOWN:
                         m_gxGraphic.Clear(Color.FromArgb(192, 255, 192));
                         m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
                         pic_user.Image = m_bmpBuffer;
+                        l_user_result.Text = "";
                         break;
                 }
             }
@@ -258,6 +276,12 @@ namespace CS203_CALLBACK_API_DEMO
             set { lb_epc.Text = value; }
         }
 
+        public string epcraw
+        {
+            get { return lb_epcraw.Text; }
+            set { lb_epcraw.Text = value; }
+        }
+
         public string AccPwd
         {
             get { return lb_accpwd.Text; }
@@ -278,6 +302,12 @@ namespace CS203_CALLBACK_API_DEMO
             get { return lb_user.Text; }
             set { lb_user.Text = value; }
         }
+        public string UserMemraw
+        {
+            get { return lb_userraw.Text; }
+            set { lb_userraw.Text = value; }
+        }
+
 
         #endregion
 
@@ -285,7 +315,7 @@ namespace CS203_CALLBACK_API_DEMO
         {
             InitializeComponent();
 
-            this.Size = new Size(306, 160);
+            //this.Size = new Size(306, 160);
 
             try
             {
@@ -335,10 +365,12 @@ namespace CS203_CALLBACK_API_DEMO
             }
             lb_pc.Text = "Unread";
             lb_epc.Text = "Unread";
+            lb_epcraw.Text = "Unread";
             lb_accpwd.Text = "Unread";
             lb_killpwd.Text = "Unread";
             lb_tid.Text = "Unread";
             lb_user.Text = "Unread";
+            lb_userraw.Text = "Unread";
             tb_showall.Text = "";
             m_gxGraphic.Clear(Color.FromArgb(192, 255, 192)); 
             m_gxGraphic.DrawImage(m_refresh_image, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, imgAtt);
@@ -376,8 +408,9 @@ namespace CS203_CALLBACK_API_DEMO
                 return;
             }
 
-            byte[] value = CSLibrary.Text.Hex.ToBytes(epc);
+            lb_epcraw.Text = epc;
 
+            byte[] value = CSLibrary.Text.Hex.ToBytes(epc);
             lb_epc.Text = Decode2String(value);
         }
 
@@ -423,8 +456,9 @@ namespace CS203_CALLBACK_API_DEMO
                 return;
             }
 
-            byte[] value = CSLibrary.Text.Hex.ToBytes(user);
+            lb_userraw.Text = user;
 
+            byte[] value = CSLibrary.Text.Hex.ToBytes(user);
             lb_user.Text = Decode2String(value);
         }
         #endregion
@@ -482,7 +516,7 @@ namespace CS203_CALLBACK_API_DEMO
         {
             tb_showall.Visible = true;
             lb_hide.Visible = true;
-            tb_showall.Text = lb_user.Text;
+            tb_showall.Text = lb_userraw.Text;
         }
         #endregion
 
@@ -511,6 +545,5 @@ namespace CS203_CALLBACK_API_DEMO
 
             return bytes;
         }
-
     }
 }
