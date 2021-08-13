@@ -14,6 +14,9 @@ namespace CS203_CheckStatus
 {
     public partial class Form1 : Form
     {
+        uint _GOI0InterruptCount = 0;
+        uint _GOI1InterruptCount = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +43,12 @@ namespace CS203_CheckStatus
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            _GOI0InterruptCount = 0;
+            _GOI1InterruptCount = 0;
+
+            label_GPI0InterruptCount.Text = _GOI0InterruptCount.ToString();
+            label_GPI1InterruptCount.Text = _GOI1InterruptCount.ToString();
+
             //while (true)
             {
                 DEVICE_STATUS st = new DEVICE_STATUS();
@@ -67,8 +76,8 @@ namespace CS203_CheckStatus
                 bool gpi0 = false, gpi1 = false;
                 if (HighLevelInterface.GetGPIStatus(tbIpAddress.Text, ref gpi0, ref gpi1) == Result.OK)
                 {
-                    lbGPI0.Text = gpi0 ? "ON" : "OFF";
-                    lbGPI1.Text = gpi1 ? "ON" : "OFF";
+                    lbGPI0.Text = gpi0 ? "High" : "Low";
+                    lbGPI1.Text = gpi1 ? "High" : "Low";
                     tsStatus.Text = "CheckGPI1Status OK!";
                 }
                 else
@@ -105,6 +114,25 @@ namespace CS203_CheckStatus
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(1);
             }
+        }
+
+        void GetGPIOInterruptStatus()
+        {
+            GPIOTrigger gpi0Trigger = GPIOTrigger.OFF, gpi1Trigger = GPIOTrigger.OFF;
+            if (HighLevelInterface.GetGPIInterrupt(tbIpAddress.Text, ref gpi0Trigger, ref gpi1Trigger) == Result.OK)
+            {
+                lbGPI0Interrupt.Text = gpi0Trigger.ToString();
+                lbGPI1Interrupt.Text = gpi1Trigger.ToString();
+                tsStatus.Text = "GetGPIInterrupt OK!";
+            }
+            else
+            {
+                lbGPI0Interrupt.Text = "UNKNOWN";
+                lbGPI1Interrupt.Text = "UNKNOWN";
+                tsStatus.Text = "GetGPIInterrupt Failed!";
+            }
+            Application.DoEvents();
+            System.Threading.Thread.Sleep(1);
         }
 
         private void btnForceReset_Click(object sender, EventArgs e)
@@ -307,6 +335,8 @@ namespace CS203_CheckStatus
                 tsStatus.Text = "SetGPI1Interrupt Failed!";
 
             }
+
+            GetGPIOInterruptStatus();
         }
 
         private void btnGPI0Interrupt_Click(object sender, EventArgs e)
@@ -322,6 +352,7 @@ namespace CS203_CheckStatus
 
             }
 
+            GetGPIOInterruptStatus();
         }
 
         private void btnStartPoll_Click(object sender, EventArgs e)
@@ -364,17 +395,29 @@ namespace CS203_CheckStatus
                 if (ip == tbIpAddress.Text)
                 {
                     if (GPI0 == 1)
-                        lbGPI0.Text = "ON";
+                    {
+                        lbGPI0.Text = "High";
+                        _GOI0InterruptCount++;
+                    }
                     else if (GPI0 == -1)
-                        lbGPI0.Text = "OFF";
+                    {
+                        lbGPI0.Text = "Low";
+                        _GOI0InterruptCount++;
+                    }
 
                     if (GPI1 == 1)
-                        lbGPI1.Text = "ON";
+                    {
+                        lbGPI1.Text = "High";
+                        _GOI1InterruptCount++;
+                    }
                     else if (GPI1 == -1)
-                        lbGPI1.Text = "OFF";
+                    {
+                        lbGPI1.Text = "Low";
+                        _GOI1InterruptCount++;
+                    }
 
-                    //lbGPI0.Text = GPI0 ? "ON" : "OFF";
-                    //lbGPI1.Text = GPI1 ? "ON" : "OFF";
+                    label_GPI0InterruptCount.Text = _GOI0InterruptCount.ToString();
+                    label_GPI1InterruptCount.Text = _GOI1InterruptCount.ToString();
                 }
             });
             return true;
@@ -387,9 +430,9 @@ namespace CS203_CheckStatus
             if (HighLevelInterface.GetGPI0Status(tbIpAddress.Text, ref ret) == Result.OK)
             {
                 if (ret)
-                    lbGPI0.Text = "ON";
+                    lbGPI0.Text = "High";
                 else
-                    lbGPI0.Text = "OFF";
+                    lbGPI0.Text = "Low";
             }
             else
                 lbGPI1.Text = "UNKNOWN";
@@ -403,9 +446,9 @@ namespace CS203_CheckStatus
             if (HighLevelInterface.GetGPI1Status(tbIpAddress.Text, ref ret) == Result.OK)
             {
                 if (ret)
-                    lbGPI1.Text = "ON";
+                    lbGPI1.Text = "High";
                 else
-                    lbGPI1.Text = "OFF";
+                    lbGPI1.Text = "Low";
             }
             else
                 lbGPI1.Text = "UNKNOWN";

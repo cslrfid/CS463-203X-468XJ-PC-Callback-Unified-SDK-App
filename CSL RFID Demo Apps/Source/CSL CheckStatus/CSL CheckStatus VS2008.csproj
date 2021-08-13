@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CS203_CheckStatus</RootNamespace>
-    <AssemblyName>CS203 CheckStatus</AssemblyName>
+    <AssemblyName>CSL Reader CheckStatus</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
