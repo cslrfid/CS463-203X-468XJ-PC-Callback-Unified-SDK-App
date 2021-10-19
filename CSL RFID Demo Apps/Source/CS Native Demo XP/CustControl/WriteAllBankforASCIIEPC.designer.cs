@@ -1,4 +1,4 @@
-namespace CS203_CALLBACK_API_DEMO
+ï»¿namespace CS203_CALLBACK_API_DEMO
 {
     partial class WriteAllBankforASCIIEPC
     {
@@ -239,7 +239,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.hexOnlyTextbox1.BackColor = System.Drawing.Color.LightPink;
             this.hexOnlyTextbox1.BackgroundText = "";
-            this.hexOnlyTextbox1.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.hexOnlyTextbox1.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.hexOnlyTextbox1.FontColor = System.Drawing.Color.Black;
             this.hexOnlyTextbox1.ForeColor = System.Drawing.Color.Black;
             this.hexOnlyTextbox1.Location = new System.Drawing.Point(176, 324);

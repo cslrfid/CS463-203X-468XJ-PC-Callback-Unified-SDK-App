@@ -1,4 +1,4 @@
-namespace CS203_CALLBACK_API_DEMO
+ï»¿namespace CS203_CALLBACK_API_DEMO
 {
     partial class FormEPCASCIIReadWrite
     {
@@ -67,7 +67,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.tc_readAndWrite.Controls.Add(this.tabPage6);
             this.tc_readAndWrite.Controls.Add(this.tabPage4);
             this.tc_readAndWrite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tc_readAndWrite.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tc_readAndWrite.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tc_readAndWrite.Location = new System.Drawing.Point(0, 0);
             this.tc_readAndWrite.Name = "tc_readAndWrite";
             this.tc_readAndWrite.SelectedIndex = 0;
@@ -126,7 +126,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.nTable1.DrawGridBorder = true;
             this.nTable1.FocusCellBackColor = System.Drawing.Color.Black;
             this.nTable1.FocusCellForeColor = System.Drawing.Color.White;
-            this.nTable1.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.nTable1.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.nTable1.LeftHeader = false;
             this.nTable1.Location = new System.Drawing.Point(0, 0);
             this.nTable1.MultipleSelection = false;
@@ -158,7 +158,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             // lb_clear
             // 
-            this.lb_clear.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_clear.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_clear.Location = new System.Drawing.Point(603, 436);
             this.lb_clear.Name = "lb_clear";
             this.lb_clear.Size = new System.Drawing.Size(53, 20);
@@ -171,7 +171,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.tb_entertag.BackColor = System.Drawing.Color.LightGreen;
             this.tb_entertag.BackgroundText = "Please type your EPC here!";
-            this.tb_entertag.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tb_entertag.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_entertag.FontColor = System.Drawing.Color.Black;
             this.tb_entertag.ForeColor = System.Drawing.Color.Gray;
             this.tb_entertag.Location = new System.Drawing.Point(98, 433);
@@ -198,7 +198,7 @@ namespace CS203_CALLBACK_API_DEMO
             // lb_ReadInfo
             // 
             this.lb_ReadInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lb_ReadInfo.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_ReadInfo.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_ReadInfo.Location = new System.Drawing.Point(155, 434);
             this.lb_ReadInfo.Name = "lb_ReadInfo";
             this.lb_ReadInfo.Size = new System.Drawing.Size(482, 35);
@@ -263,7 +263,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.ImageKey = "(none)";
             this.label2.Location = new System.Drawing.Point(62, 492);
@@ -275,7 +275,7 @@ namespace CS203_CALLBACK_API_DEMO
             // lb_WriteInfo
             // 
             this.lb_WriteInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lb_WriteInfo.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_WriteInfo.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_WriteInfo.Location = new System.Drawing.Point(175, 403);
             this.lb_WriteInfo.Name = "lb_WriteInfo";
             this.lb_WriteInfo.Size = new System.Drawing.Size(264, 38);
@@ -298,7 +298,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.m_writeAllBank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.m_writeAllBank.epc = "";
-            this.m_writeAllBank.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.m_writeAllBank.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.m_writeAllBank.IconAcc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
             this.m_writeAllBank.IconEpc = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;
             this.m_writeAllBank.IconKill = CS203_CALLBACK_API_DEMO.WriteAllBankforASCIIEPC.WriteState.UNKNOWN;

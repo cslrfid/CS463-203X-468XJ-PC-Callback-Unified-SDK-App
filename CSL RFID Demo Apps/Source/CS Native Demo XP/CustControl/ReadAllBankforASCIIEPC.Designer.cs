@@ -1,4 +1,4 @@
-namespace CS203_CALLBACK_API_DEMO
+ï»¿namespace CS203_CALLBACK_API_DEMO
 {
     partial class ReadAllBankforASCIIEPC
     {
@@ -144,7 +144,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             // lb_hide
             // 
-            this.lb_hide.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_hide.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_hide.Location = new System.Drawing.Point(523, 359);
             this.lb_hide.Name = "lb_hide";
             this.lb_hide.Size = new System.Drawing.Size(63, 29);
@@ -389,7 +389,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.hexOnlyTextbox1.BackColor = System.Drawing.Color.LightPink;
             this.hexOnlyTextbox1.BackgroundText = "";
-            this.hexOnlyTextbox1.Font = new System.Drawing.Font("·s²Ó©úÅé", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.hexOnlyTextbox1.Font = new System.Drawing.Font("ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.hexOnlyTextbox1.FontColor = System.Drawing.Color.Black;
             this.hexOnlyTextbox1.ForeColor = System.Drawing.Color.Black;
             this.hexOnlyTextbox1.Location = new System.Drawing.Point(204, 356);
