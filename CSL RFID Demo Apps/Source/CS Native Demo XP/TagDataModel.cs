@@ -168,6 +168,19 @@ namespace CS203_CALLBACK_API_DEMO
             set { m_items = value; }
         }
 
+        public int FindEPCIndex(TagCallbackInfo info)
+        {
+            int index = 0;
+            foreach (TagCallbackInfo item in m_items)
+            {
+                if (item.epc.ToString() == info.epc.ToString())
+                    return index;
+                index++;
+            }
+
+            return -1;
+        }
+
         public void UpdateItem(TagCallbackInfo info, int index)
         {
             m_items[index] = info;

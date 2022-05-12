@@ -26,7 +26,9 @@ namespace CS203_CALLBACK_API_DEMO
             };
 #endif
         private int[] ThresholdArr = new int[] { 0, 50, 65, 70};
-        private int rssi = 0;
+        private float rssi = 0;
+        private float rssimin = 999;
+        private float rssimax = -999;
         private bool bTone = true;
         private string TargetEPC = "";
         private bool m_stop = false;
@@ -34,9 +36,13 @@ namespace CS203_CALLBACK_API_DEMO
         #endregion
 
         #region Form
+
+        CS203_CALLBACK_API_DEMO.RSSI90 rssi90 = new RSSI90();
+
         public GeigerSearchForm()
         {
             InitializeComponent();
+            radioButton_dBm.Checked = true;
         }
         private void GeigerSearchForm_Load(object sender, EventArgs e)
         {
@@ -70,6 +76,9 @@ namespace CS203_CALLBACK_API_DEMO
                 return;
             }
 
+            rssimin = 999;
+            rssimax = -999;
+            rssi90.ClearData();
             Start();
         }
 
@@ -117,7 +126,7 @@ namespace CS203_CALLBACK_API_DEMO
 
             AttachCallback(false);
 
-            using (TagSearchForm inv = new TagSearchForm())
+            using (TagSearchForm inv = new TagSearchForm(radioButton_dBm.Checked))
             {
                 if (inv.ShowDialog() == DialogResult.OK)
                 {
@@ -139,7 +148,7 @@ namespace CS203_CALLBACK_API_DEMO
         private void tmr_ZeroDetector_Tick(object sender, EventArgs e)
         {
             StopOORDetectTmr();
-            UpdateRssiLb(String.Empty);
+            UpdateRssiLb(String.Empty, String.Empty, String.Empty);
             UpdateProgressValue(0);
             tmr_tone.Enabled = false;
         }
@@ -180,6 +189,9 @@ namespace CS203_CALLBACK_API_DEMO
 #endif
                 }
             }
+
+
+            label_rssi90.Text = rssi90.GetRssi90();
         }
 
         #endregion
@@ -206,18 +218,29 @@ namespace CS203_CALLBACK_API_DEMO
                 switch (e.type)
                 {
                     case CallbackType.TAG_SEARCHING:
-                        rssi = (int)((TagCallbackInfo)e.info).rssi;
+                        rssi = ((TagCallbackInfo)e.info).rssi;
 
-                        UpdateRssiLb(rssi.ToString());
+                        if (radioButton_dBm.Checked)
+                            rssi -= 106.989F;
+
+                        if (rssi < rssimin)
+                            rssimin = rssi;
+
+                        if (rssi > rssimax)
+                            rssimax = rssi;
+
+                        rssi90.Add(rssi);
+                        
+                        UpdateRssiLb(((int)rssi).ToString(), ((int)rssimin).ToString(), ((int)rssimax).ToString());
                         //lb_rssi.Text = rssi.ToString();
 
-                        UpdateProgressValue(rssi);
+                        UpdateProgressValue((int)rssi);
 
                         //Tone
                         EnToneTmr(true);
 
-                        if (rssi < 0)
-                            UpdateRssiLb(String.Empty);
+                        if ((radioButton1.Checked && rssi < 0) || (radioButton_dBm.Checked && rssi < -107))
+                            UpdateRssiLb(String.Empty, String.Empty, String.Empty);
                         else
                             RestartOORDetectTmr();
                         break;
@@ -316,16 +339,20 @@ namespace CS203_CALLBACK_API_DEMO
             if (tmr_tone.Enabled != en)
                 tmr_tone.Enabled = en;
         }
-        private delegate void UpdateRssiLbDeleg(string msg);
-        private void UpdateRssiLb(string msg)
+
+        private delegate void UpdateRssiLbDeleg(string msg, string msg1, string msg2);
+        private void UpdateRssiLb(string msg, string msg1, string msg2)
         {
             if (this.InvokeRequired)
             {
-                this.Invoke(new UpdateRssiLbDeleg(UpdateRssiLb), new object[] { msg });
+                this.Invoke(new UpdateRssiLbDeleg(UpdateRssiLb), new object[] { msg, msg1, msg2});
                 return;
             }
             lb_rssi.Text = msg;
+            label_minRSSI.Text = msg1;
+            label_maxRSSI.Text = msg2;
         }
+
         private delegate void UpdateProgressValueDeleg(int value);
         private void UpdateProgressValue(int value)
         {
@@ -334,10 +361,10 @@ namespace CS203_CALLBACK_API_DEMO
                 this.BeginInvoke(new UpdateProgressValueDeleg(UpdateProgressValue), new object[] { value });
                 return;
             }
-            if (value > 100)
-                pg_rssi.Value = 100;
-            else if (value < 0)
-                pg_rssi.Value = 0;
+            if (value > pg_rssi.Maximum)
+                pg_rssi.Value = pg_rssi.Maximum;
+            else if (value < pg_rssi.Minimum)
+                pg_rssi.Value = pg_rssi.Minimum;
             else
                 pg_rssi.Value = value;
         }
@@ -380,5 +407,106 @@ namespace CS203_CALLBACK_API_DEMO
         }
         #endregion
 
+        private void radioButton_dBm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton_dBm.Checked)
+            {
+                tk_threshold.Minimum = -100;
+                tk_threshold.Maximum = 0;
+                tk_threshold.Value = 75 - 107;
+                pg_rssi.Minimum = -100;
+                pg_rssi.Maximum = 0;
+                label1.Text = "-100";
+                label3.Text = "-50";
+                label2.Text = "0";
+                rssimin = 999;
+                rssimax = -999;
+                rssi90.ClearData();
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                tk_threshold.Minimum = 0;
+                tk_threshold.Maximum = 100;
+                tk_threshold.Value = 75;
+                pg_rssi.Minimum = 0;
+                pg_rssi.Maximum = 100;
+                label1.Text = "0";
+                label3.Text = "50";
+                label2.Text = "100";
+                rssimin = 999;
+                rssimax = -999;
+                rssi90.ClearData();
+            }
+        }
+
+        private void label_minRSSI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_rssi90_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rssimin = 999;
+            rssimax = -999;
+            rssi90.ClearData();
+        }
+    }
+
+    public class RSSI90
+    {
+        private List <float> rssiArray = new List <float>();
+
+        public RSSI90()
+        {
+            ClearData();
+        }
+
+        public void ClearData ()
+        {
+            lock (rssiArray)
+                rssiArray.Clear();
+        }
+
+        public void Add (float value)
+        {
+            lock (rssiArray)
+            {
+                if (rssiArray.Count >= 100)
+                    rssiArray.RemoveAt (0);
+                rssiArray.Add(value);
+            }
+        }
+
+        public string GetRssi90()
+        {
+            List<float> tmp;
+
+            lock (rssiArray)
+            {
+                if (rssiArray.Count < 100)
+                    return "not ready";
+                
+                tmp = (new List<float>(rssiArray));
+            }
+
+            tmp.Sort();
+
+#if debugrssi90
+            foreach (float data in tmp)
+                Console.WriteLine(data);
+            Console.WriteLine("----------------------");
+#endif
+
+            return tmp[90].ToString("0.00");
+        }
     }
 }

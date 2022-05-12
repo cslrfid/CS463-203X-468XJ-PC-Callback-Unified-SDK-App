@@ -14,9 +14,10 @@ namespace CS203_CALLBACK_API_DEMO
 {
     public partial class TagSearchForm : Form
     {
-        private TagDataModel m_tagTable = new TagDataModel(SlowFlags.INDEX | SlowFlags.PC | SlowFlags.EPC);
+        private TagDataModel m_tagTable = new TagDataModel(SlowFlags.INDEX | SlowFlags.PC | SlowFlags.EPC | SlowFlags.RSSI);
         private bool m_toggleStartBtn = false;
         private bool m_stop = false;
+        private bool m_dBm = false;
 
         public string pc
         {
@@ -40,9 +41,22 @@ namespace CS203_CALLBACK_API_DEMO
                 return String.Empty;
             }
         }
-        #region Form
-        public TagSearchForm()
+        public string rssi
         {
+            get
+            {
+                if (nTable1.CurrentRowIndex != -1)
+                {
+                    return m_tagTable.Items[nTable1.CurrentRowIndex].rssi.ToString("0.00");
+                }
+                return String.Empty;
+            }
+        }
+
+        #region Form
+        public TagSearchForm(bool dBm = false)
+        {
+            this.m_dBm = dBm;
             InitializeComponent();
         }
 
@@ -50,9 +64,11 @@ namespace CS203_CALLBACK_API_DEMO
         {
             //Table setting
             nTable1.BindModel(m_tagTable);//Bind empty table to draw column header
-            nTable1.SetColumnWidth(0, 50);//Index column width
-            nTable1.SetColumnWidth(1, 50);//Rssi column width
-            
+            nTable1.SetColumnWidth(0, 30);//Index column width
+            nTable1.SetColumnWidth(1, 45);//PC column width
+            nTable1.SetColumnWidth(2, 170);//EPC column width
+            nTable1.SetColumnWidth(3, 40);//RSSI column width
+
             //Attach Callback Event
             AttachCallback(true);
         }
@@ -92,9 +108,12 @@ namespace CS203_CALLBACK_API_DEMO
             this.Invoke((System.Threading.ThreadStart)delegate()
             {
                 //Using asyn delegate to update UI
-                if (e.type == CallbackType.TAG_INVENTORY)
+                if (e.type == CallbackType.TAG_RANGING)
                 {
                     //Device.BuzzerOn(2000, 40, BUZZER_SOUND.HIGH);
+
+                    if (m_dBm)
+                        e.info.rssi -= 106.989F;
 
                     UpdateRecords(e.info);
                 }
@@ -166,7 +185,12 @@ namespace CS203_CALLBACK_API_DEMO
             TagCallbackInfo record = (TagCallbackInfo)data;
             if (record != null)
             {
-                m_tagTable.AddItem(record);
+                var index = m_tagTable.FindEPCIndex (record);
+
+                if (index != -1)
+                    m_tagTable.UpdateItem(record, index);
+                else
+                    m_tagTable.AddItem(record);
                 lb_tagCount.Text = m_tagTable.Items.Count.ToString();
             }
         }
@@ -208,11 +232,11 @@ namespace CS203_CALLBACK_API_DEMO
 
                 if (Program.appSetting.tagGroup.selected == Selected.ALL)
                 {
-                    Program.ReaderXP.Options.TagInventory.flags = SelectFlags.ZERO;
+                    Program.ReaderXP.Options.TagRanging.flags = SelectFlags.ZERO;
                 }
                 else
                 {
-                    Program.ReaderXP.Options.TagInventory.flags = SelectFlags.SELECT;
+                    Program.ReaderXP.Options.TagRanging.flags = SelectFlags.SELECT;
 
                     Program.ReaderXP.Options.TagGeneralSelected.flags = SelectMaskFlags.ENABLE_TOGGLE;
                     switch (Program.appSetting.MaskBank)
@@ -244,7 +268,7 @@ namespace CS203_CALLBACK_API_DEMO
                 }
 
 
-                Program.ReaderXP.StartOperation(Operation.TAG_INVENTORY, Program.appSetting.Cfg_blocking_mode);
+                Program.ReaderXP.StartOperation(Operation.TAG_RANGING, Program.appSetting.Cfg_blocking_mode);
             }
         }
 
