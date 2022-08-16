@@ -124,11 +124,19 @@ namespace CS203_CALLBACK_API_DEMO
 
             // portColumn
             portColumn.HeaderText = " #";
-            portColumn.MinimumWidth = 50;
+            if (Program.ReaderXP.OEMDeviceType == Machine.CS203X)
+            {
+                portColumn.MinimumWidth = 120;
+                portColumn.Width = 120;
+            }
+            else
+            {
+                portColumn.MinimumWidth = 50;
+                portColumn.Width = 50;
+            }
             portColumn.Name = "portColumn";
             portColumn.ReadOnly = true;
             portColumn.Resizable = DataGridViewTriState.False;
-            portColumn.Width = 50;
             portColumn.DataPropertyName = "Port";
             portColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             portColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -353,6 +361,14 @@ namespace CS203_CALLBACK_API_DEMO
 
         void CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (Program.ReaderXP.OEMDeviceType == Machine.CS203X && e.ColumnIndex == PORT_INDEX)
+            {
+                if (e.RowIndex == 0)
+                    e.Value = "2 (External Antenna)";
+                else if (e.RowIndex == 1)
+                    e.Value = "3 (Internal Antenna)";
+            }
+
             if
             (
                 AntenneConfig[e.RowIndex].State ==
