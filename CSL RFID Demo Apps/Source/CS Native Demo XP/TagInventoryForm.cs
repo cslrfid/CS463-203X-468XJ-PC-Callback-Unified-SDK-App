@@ -10,6 +10,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 
+using System.Net.NetworkInformation;
+
+
+
 namespace CS203_CALLBACK_API_DEMO
 {
     using CSLibrary;
@@ -278,6 +282,8 @@ namespace CS203_CALLBACK_API_DEMO
                         Program.ReaderXP.Options.TagRanging.flags |= CSLibrary.Constants.SelectFlags.POSTMATCH;
                     }
 
+                    
+                    StatisticsReport.WriteLine("Application Restarts Inventory");
                     Program.ReaderXP.StartOperation(Operation.TAG_RANGING, false);
 
                     EnableButton(ButtonState.ALL, true);
@@ -346,7 +352,7 @@ namespace CS203_CALLBACK_API_DEMO
                             totaltagscycle = totaltagsthiscycle;
                             totaltagsthiscycle = 0;
 
-                            StatisticsReport.WriteLine("System Reset, Last Tag #{0}, {1}", totaltagscycle, logTagCntPerCycle());
+                            StatisticsReport.WriteLine("Network Disconnected, Last Tag #{0}, {1}", totaltagscycle, logTagCntPerCycle());
                             StatisticsReport.Flush();
                             
                             
@@ -364,7 +370,7 @@ namespace CS203_CALLBACK_API_DEMO
                     case RFState.DISCONNECTED:
                         if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
                         {
-                            StatisticsReport.WriteLine("System Reset");
+                            StatisticsReport.WriteLine("Network Disconnected");
                             StatisticsReport.Flush();
 
                             /*
@@ -622,9 +628,18 @@ namespace CS203_CALLBACK_API_DEMO
                                totaltagscycle = totaltagsthiscycle;
                                totaltagsthiscycle = 0;
 
-                               StatisticsReport.WriteLine("System Reset, Last Tag #{0}, {1}", totaltagscycle, logTagCntPerCycle() + Environment.NewLine);
-                               
-                                   /*
+                               StatisticsReport.WriteLine("Network Disconnected, Last Tag #{0}, {1}", totaltagscycle, logTagCntPerCycle() + Environment.NewLine);
+
+                               {
+                                   HighLevelInterface hotReader = (HighLevelInterface)(sender);
+
+                                   if (PingHost(hotReader.IPAddress))
+                                       StatisticsReport.WriteLine("Reader on Network! : ping success");
+                                    else
+                                        StatisticsReport.WriteLine("Reader NOT on Network! : ping fail");
+                               }
+
+                               /*
                                //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
                                TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, true);
 
@@ -643,7 +658,7 @@ namespace CS203_CALLBACK_API_DEMO
                        case RFState.DISCONNECTED:
                            if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
                            {
-                               StatisticsReport.WriteLine ("System Reset");
+                               StatisticsReport.WriteLine ("Network Disconnected");
 
                                /*
                                //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
@@ -652,7 +667,6 @@ namespace CS203_CALLBACK_API_DEMO
                                tw.WriteLine("{0} : System Reset", DateTime.Now.ToString());
 
                                tw.Close();*/
-
                            }
 
                            Reset();
@@ -1340,7 +1354,7 @@ namespace CS203_CALLBACK_API_DEMO
                 uint power = 0;
                 Program.ReaderXP.GetPowerLevel(ref power);
 
-                StatisticsReport.WriteLine("{0} {1} : Start Inventory ", Program.ReaderXP.DeviceNameOrIP, Program.ReaderXP.MacAddress);
+                StatisticsReport.WriteLine("{0} {1} : User Starts Inventory ", Program.ReaderXP.DeviceNameOrIP, Program.ReaderXP.MacAddress);
                 StatisticsReport.WriteLine("Addional information : profile:{0} {1}:{2} {3} {4} {5} {6}",
                     Program.appSetting.Link_profile,
                     Program.appSetting.Singulation,
@@ -1577,7 +1591,7 @@ namespace CS203_CALLBACK_API_DEMO
                 Program.ReaderXP.GetCurrentLinkProfile(ref profile);
                 if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
                 {
-                    StatisticsReport.WriteLine("Stop Inventory : Current profile {0}", profile);
+                    StatisticsReport.WriteLine("User Stops Inventory : Current profile {0}", profile);
                     StatisticsReport.Close();
 
                     /*
@@ -1875,6 +1889,33 @@ namespace CS203_CALLBACK_API_DEMO
         {
 
         }
+
+        public static bool PingHost(string nameOrAddress)
+        {
+            bool pingable = false;
+            Ping pinger = null;
+
+            try
+            {
+                pinger = new Ping();
+                PingReply reply = pinger.Send(nameOrAddress);
+                pingable = reply.Status == IPStatus.Success;
+            }
+            catch (PingException)
+            {
+                // Discard PingExceptions and return false;
+            }
+            finally
+            {
+                if (pinger != null)
+                {
+                    pinger.Dispose();
+                }
+            }
+
+            return pingable;
+        }
+
     }
 
     #region Log records
@@ -1998,6 +2039,9 @@ public static class StatisticsReport
 
     static public void Flush()
     {
+        if (tw == null)
+            return;
+
         tw.Flush();
         _BufferCount = 0;
     }
@@ -2033,6 +2077,7 @@ public static class StatisticsReport
         }
         catch (Exception ex)
         {
+            var err = ex.Message;
         }
     }
 }
