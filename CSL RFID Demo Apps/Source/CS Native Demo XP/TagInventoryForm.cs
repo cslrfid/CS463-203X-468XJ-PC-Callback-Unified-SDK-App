@@ -264,8 +264,6 @@ namespace CS203_CALLBACK_API_DEMO
                             Program.ReaderXP.Options.TagSelected.MaskLength = (uint)(Program._PREFILTER_MASK_DATA.Length) * 4;
                         }
 
-
-
                         Program.ReaderXP.Options.TagRanging.flags |= CSLibrary.Constants.SelectFlags.SELECT;
                     }
 
@@ -1368,7 +1366,26 @@ namespace CS203_CALLBACK_API_DEMO
                     ((((FixedQParms)Program.appSetting.SingulationAlg).toggleTarget != 0) ? "Toggle" : Program.appSetting.tagGroup.target.ToString()) :
                     ((((DynamicQParms)Program.appSetting.SingulationAlg).toggleTarget != 0) ? "Toggle" : Program.appSetting.tagGroup.target.ToString()))
                     );
+                StatisticsReport.WriteLine("Antenna port enabled : ");
 
+                switch (Program.ReaderXP.OEMDeviceType)
+                {
+                    case Machine.CS203X:
+                        for (int cnt = 2; cnt <= 3; cnt++)
+                            StatisticsReport.WriteLine("Antenna port {0} : {1}, Power : {2}", cnt, Program.appSetting.AntennaList[cnt].State.ToString(), Program.appSetting.AntennaList[cnt].PowerLevel.ToString());
+                        break;
+
+                    case Machine.CS463:
+                    case Machine.CS469:
+                        for (int cnt = 0; cnt <= 3; cnt++)
+                            StatisticsReport.WriteLine("Antenna port {0} : {1}, Power : {2}", cnt, Program.appSetting.AntennaList[cnt].State.ToString(), Program.appSetting.AntennaList[cnt].PowerLevel.ToString());
+                        break;
+
+                    default:
+                        for (int cnt = 0; cnt < Program.appSetting.AntennaList.Count; cnt++)
+                            StatisticsReport.WriteLine("Antenna port {0} : {1}, Power : {2}", cnt, Program.appSetting.AntennaList[cnt].State.ToString(), Program.appSetting.AntennaList[cnt].PowerLevel.ToString());
+                        break;
+                }
 
                 /*
                 //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
