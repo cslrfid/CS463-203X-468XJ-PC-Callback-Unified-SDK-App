@@ -29,9 +29,9 @@ namespace CS203_CALLBACK_API_DEMO
         private Thread reset;
         private long totaltags = 0;
         private long totalnew = 0;
-        private int totalnewcnt= 0;
+        private int totalnewcnt = 0;
         private long totaltagsthiscycle = 0;
-        private long [] totaltagsthiscycleperantenna = new long[16];
+        private long[] totaltagsthiscycleperantenna = new long[16];
         private long totaltagscycle = 0;
         private long totalcrc = 0;
         private Stopwatch watchrate = new Stopwatch();
@@ -47,7 +47,7 @@ namespace CS203_CALLBACK_API_DEMO
         private int AntCycleTimeCount = 0;
 
         public string TagLogFileName;
-        
+
         private int numChannelBusy = 0;
 
         private bool SaveSQL = false;
@@ -177,7 +177,7 @@ namespace CS203_CALLBACK_API_DEMO
             }
         }
 
- 
+
         #endregion
 
         #region Event Callback
@@ -185,29 +185,29 @@ namespace CS203_CALLBACK_API_DEMO
         {
             Result rc = Result.OK;
 
-            this.BeginInvoke((System.Threading.ThreadStart)delegate()
+            this.BeginInvoke((System.Threading.ThreadStart)delegate ()
             {
-               panelNetworkDisconnet.Location = new Point((this.Size.Width - panelNetworkDisconnet.Size.Width) / 2, (this.Size.Height - panelNetworkDisconnet.Size.Height) / 2);
-               panelNetworkDisconnet.Visible = true;
-               //MessageForm.LaunchForm(this);
-               {
-                   EnableButton(ButtonState.ALL, false);
-                   Application.DoEvents();
-               RETRY:
-                   //Reset Reader first, it will shutdown current reader and restart reader
-                   //It will also reconfig back previous operation
+                panelNetworkDisconnet.Location = new Point((this.Size.Width - panelNetworkDisconnet.Size.Width) / 2, (this.Size.Height - panelNetworkDisconnet.Size.Height) / 2);
+                panelNetworkDisconnet.Visible = true;
+                //MessageForm.LaunchForm(this);
+                {
+                    EnableButton(ButtonState.ALL, false);
+                    Application.DoEvents();
+                RETRY:
+                    //Reset Reader first, it will shutdown current reader and restart reader
+                    //It will also reconfig back previous operation
 
-                   while (Program.ReaderXP.Reconnect(1) != Result.OK)
-                       if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
-                       {
-                           StatisticsReport.WriteLine("Reconnect Fail!!!");
-                           StatisticsReport.Flush();
-                       }
-                   
-                   EnableButton(ButtonState.ALL, true);
-               }
+                    while (Program.ReaderXP.Reconnect(1) != Result.OK)
+                        if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
+                        {
+                            StatisticsReport.WriteLine("Reconnect Fail!!!");
+                            StatisticsReport.Flush();
+                        }
 
-               panelNetworkDisconnet.Visible = false;
+                    EnableButton(ButtonState.ALL, true);
+                }
+
+                panelNetworkDisconnet.Visible = false;
             });
 
             //MessageForm.msgform.CloseForm();
@@ -217,7 +217,7 @@ namespace CS203_CALLBACK_API_DEMO
         {
             Result rc = Result.OK;
 
-            this.BeginInvoke((System.Threading.ThreadStart)delegate()
+            this.BeginInvoke((System.Threading.ThreadStart)delegate ()
             {
                 panelNetworkDisconnet.Location = new Point((this.Size.Width - panelNetworkDisconnet.Size.Width) / 2, (this.Size.Height - panelNetworkDisconnet.Size.Height) / 2);
                 panelNetworkDisconnet.Visible = true;
@@ -243,12 +243,12 @@ namespace CS203_CALLBACK_API_DEMO
                     {
                         Program.ReaderXP.Options.TagSelected.flags = CSLibrary.Constants.SelectMaskFlags.ENABLE_TOGGLE;
 
-/*                        Program.ReaderXP.Options.TagSelected.bank = CSLibrary.Constants.MemoryBank.EPC;
-                        Program.ReaderXP.Options.TagSelected.epcMask = new CSLibrary.Structures.S_MASK(Program._PREFILTER_MASK_EPC);
-                        Program.ReaderXP.Options.TagSelected.epcMaskOffset = Program._PREFILTER_Offset;
-                        Program.ReaderXP.Options.TagSelected.epcMaskLength = (uint)(Program._PREFILTER_MASK_EPC.Length) * 4;
-                        Program.ReaderXP.StartOperation(CSLibrary.Constants.Operation.TAG_PREFILTER, true);
-*/
+                        /*                        Program.ReaderXP.Options.TagSelected.bank = CSLibrary.Constants.MemoryBank.EPC;
+                                                Program.ReaderXP.Options.TagSelected.epcMask = new CSLibrary.Structures.S_MASK(Program._PREFILTER_MASK_EPC);
+                                                Program.ReaderXP.Options.TagSelected.epcMaskOffset = Program._PREFILTER_Offset;
+                                                Program.ReaderXP.Options.TagSelected.epcMaskLength = (uint)(Program._PREFILTER_MASK_EPC.Length) * 4;
+                                                Program.ReaderXP.StartOperation(CSLibrary.Constants.Operation.TAG_PREFILTER, true);
+                        */
                         if (Program._PREFILTER_Bank == 1)
                         {
                             Program.ReaderXP.Options.TagSelected.bank = CSLibrary.Constants.MemoryBank.EPC;
@@ -280,7 +280,7 @@ namespace CS203_CALLBACK_API_DEMO
                         Program.ReaderXP.Options.TagRanging.flags |= CSLibrary.Constants.SelectFlags.POSTMATCH;
                     }
 
-                    
+
                     StatisticsReport.WriteLine("Application Restarts Inventory");
                     Program.ReaderXP.StartOperation(Operation.TAG_RANGING, false);
 
@@ -352,8 +352,8 @@ namespace CS203_CALLBACK_API_DEMO
 
                             StatisticsReport.WriteLine("Network Disconnected, Last Tag #{0}, {1}", totaltagscycle, logTagCntPerCycle());
                             StatisticsReport.Flush();
-                            
-                            
+
+
                             /*
                             //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
                             TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, true);
@@ -399,7 +399,7 @@ namespace CS203_CALLBACK_API_DEMO
                             int common = 0;
 
                             StatisticsReport.WriteLine("Antenna Cycle {0}, {1} Tag/Cycle, {2}", AntCycleCount, totaltagscycle, logTagCntPerCycle());
-                            
+
                             /*
                             //TextWriter tw = new StreamWriter(ControlPanelForm.SummaryFile, true);
                             //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
@@ -430,17 +430,8 @@ namespace CS203_CALLBACK_API_DEMO
                         if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
                         {
                             StatisticsReport.WriteLine("Inventory MAC Error {0}", Program.ReaderXP.LastMacErrorCode.ToString("X4") + Environment.NewLine);
-                            
-                            /*
-
-                            TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, true);
-
-                            tw.WriteLine("{0} : Inventory MAC Error {1}", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"), Program.ReaderXP.LastMacErrorCode.ToString("X4") + Environment.NewLine);
-
-                            tw.Close(); */
                         }
                         break;
-
 
                     case RFState.INVENTORY_CYCLE_BEGIN:
                         if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
@@ -568,7 +559,7 @@ namespace CS203_CALLBACK_API_DEMO
                 }
             }
 
-            this.BeginInvoke((System.Threading.ThreadStart)delegate()
+            this.BeginInvoke((System.Threading.ThreadStart)delegate ()
                {
                    switch (e.state)
                    {
@@ -578,6 +569,8 @@ namespace CS203_CALLBACK_API_DEMO
 
                            if (Program.ReaderXP.LastMacErrorCode != 0)
                            {
+                               MacErrorDebugInformation();
+
                                string errMsg = "Mac Error Code 0x" + Program.ReaderXP.LastMacErrorCode.ToString("X4");
 
                                StatisticsReport.WriteLine(errMsg);
@@ -589,7 +582,7 @@ namespace CS203_CALLBACK_API_DEMO
                                    Program.ReaderXP.EngReadRegister(0x0B04, ref value);
                                    errMsg += ", Mac 0x0B04=0x" + value.ToString("X4");
                                }
-                               
+
                                /*
                                TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, true);
 
@@ -633,8 +626,8 @@ namespace CS203_CALLBACK_API_DEMO
 
                                    if (PingHost(hotReader.IPAddress))
                                        StatisticsReport.WriteLine("Reader on Network! : ping success");
-                                    else
-                                        StatisticsReport.WriteLine("Reader NOT on Network! : ping fail");
+                                   else
+                                       StatisticsReport.WriteLine("Reader NOT on Network! : ping fail");
                                }
 
                                /*
@@ -656,7 +649,7 @@ namespace CS203_CALLBACK_API_DEMO
                        case RFState.DISCONNECTED:
                            if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
                            {
-                               StatisticsReport.WriteLine ("Network Disconnected");
+                               StatisticsReport.WriteLine("Network Disconnected");
 
                                /*
                                //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
@@ -669,7 +662,7 @@ namespace CS203_CALLBACK_API_DEMO
 
                            Reset();
                            break;
-                       
+
                        case RFState.ABORT:
                            //ControlPanelForm.EnablePannel(false);
                            break;
@@ -686,7 +679,7 @@ namespace CS203_CALLBACK_API_DEMO
             string taglog = "";
             //long totalTags = totaltagsthiscycle;
             //totaltagsthiscycle = 0;
-            long [] totalTagPerAntenna = new long[16]; 
+            long[] totalTagPerAntenna = new long[16];
 
             int numofantenna;
 
@@ -703,14 +696,14 @@ namespace CS203_CALLBACK_API_DEMO
                     numofantenna = 4;
                     break;
 
-                default :
+                default:
                     numofantenna = 1;
                     break;
             }
 
-            for (int cnt = 0; cnt < numofantenna; cnt ++)
+            for (int cnt = 0; cnt < numofantenna; cnt++)
             {
-                totalTagPerAntenna [cnt] = totaltagsthiscycleperantenna[cnt];
+                totalTagPerAntenna[cnt] = totaltagsthiscycleperantenna[cnt];
                 totaltagsthiscycleperantenna[cnt] = 0;
             }
 
@@ -731,7 +724,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         const string DATETIMEFORMAT = "yyyy/MM/dd HH:mm:ss.fff UTC zzz";
 
-        void TagLogFile_SetName ()
+        void TagLogFile_SetName()
         {
             //TagLogFileName = CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "TagLog" + CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.TagLogFileCurrentNumber + (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.radioButton_CSV.Checked ? ".csv" : ".txt");
             TagLogFileName = CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "TagLog" + DateTime.Now.ToString("yyyyMMddHHmmss") + (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.radioButton_CSV.Checked ? ".csv" : ".txt");
@@ -752,7 +745,7 @@ namespace CS203_CALLBACK_API_DEMO
                     System.Media.SystemSounds.Beep.Play();
                 }
             }*/
-            this.BeginInvoke((System.Threading.ThreadStart)delegate()
+            this.BeginInvoke((System.Threading.ThreadStart)delegate ()
             {
                 // Do your work here
                 // UI refresh and data processing on other Thread
@@ -796,7 +789,7 @@ namespace CS203_CALLBACK_API_DEMO
                         Interlocked.Increment(ref totaltagsthiscycle);
                         Interlocked.Increment(ref totaltags);
 
-                        int foundIndex = lock_InvItems.FindIndex(delegate(CSLibrary.Structures.TagCallbackInfo iepc) { return (iepc.epc.ToString() == e.info.epc.ToString() && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : iepc.antennaPort == e.info.antennaPort)); });
+                        int foundIndex = lock_InvItems.FindIndex(delegate (CSLibrary.Structures.TagCallbackInfo iepc) { return (iepc.epc.ToString() == e.info.epc.ToString() && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : iepc.antennaPort == e.info.antennaPort)); });
                         {
                             if (foundIndex >= 0)
                             {
@@ -853,7 +846,7 @@ namespace CS203_CALLBACK_API_DEMO
                             Interlocked.Increment(ref totaltagsthiscycle);
                             Interlocked.Increment(ref totaltags);
                             TagCallbackInfo data = e.info;
-                            
+
                             UpdateInvUI(data);
                         }
 #if nouse
@@ -915,7 +908,7 @@ namespace CS203_CALLBACK_API_DEMO
             }
         }
 
-        string ToString(UInt16 [] array)
+        string ToString(UInt16[] array)
         {
             string result = "";
             for (int i = 0; i < array.Length; i++)
@@ -932,7 +925,7 @@ namespace CS203_CALLBACK_API_DEMO
                 return;
             //lock (MyLock)
             {
-                int foundIndex = lock_InvItems.FindIndex(delegate(CSLibrary.Structures.TagCallbackInfo iepc) { return (iepc.epc.ToString() == InventoryInformation.epc.ToString() && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : iepc.antennaPort == InventoryInformation.antennaPort)); });
+                int foundIndex = lock_InvItems.FindIndex(delegate (CSLibrary.Structures.TagCallbackInfo iepc) { return (iepc.epc.ToString() == InventoryInformation.epc.ToString() && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : iepc.antennaPort == InventoryInformation.antennaPort)); });
                 {
                     if (foundIndex >= 0)
                     {
@@ -955,12 +948,12 @@ namespace CS203_CALLBACK_API_DEMO
 
                         if (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBoxReadTID.Checked)
                         {
-                            TIDONLY = ToString (InventoryInformation.Bank1Data);
+                            TIDONLY = ToString(InventoryInformation.Bank1Data);
                             if (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBoxReadUser.Checked)
-                                USERONLY = ToString (InventoryInformation.Bank2Data);
+                                USERONLY = ToString(InventoryInformation.Bank2Data);
                         }
                         else if (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBoxReadUser.Checked)
-                            USERONLY = ToString (InventoryInformation.Bank1Data);
+                            USERONLY = ToString(InventoryInformation.Bank1Data);
 
                         /* old structure
                         if (TagDataStr.Length > InventoryInformation.pc.EPCLength * 4)
@@ -991,7 +984,7 @@ namespace CS203_CALLBACK_API_DEMO
                         string TIDONLY = "";
                         string USERONLY = "";
 
-                        string w1string; 
+                        string w1string;
                         string w2string;
 
                         if (InventoryInformation.xpc_w1 == null)
@@ -1156,7 +1149,7 @@ namespace CS203_CALLBACK_API_DEMO
 
                         if (item.pc != null)
                         {
-                            if (m_sortListView.Items[index].SubItems[4].Text == item.epc.ToString().Substring(0, (int)item.pc.EPCLength * 4) && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : uint.Parse(m_sortListView.Items[index].SubItems[9+2].Text) == item.antennaPort))
+                            if (m_sortListView.Items[index].SubItems[4].Text == item.epc.ToString().Substring(0, (int)item.pc.EPCLength * 4) && (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.checkBox_GroupTags.Checked ? true : uint.Parse(m_sortListView.Items[index].SubItems[9 + 2].Text) == item.antennaPort))
                             {
                                 m_sortListView.Items[index].SubItems[2].Text = w1string;
                                 m_sortListView.Items[index].SubItems[3].Text = w2string;
@@ -1179,8 +1172,8 @@ namespace CS203_CALLBACK_API_DEMO
                             {
                                 m_sortListView.Items[index].SubItems[2].Text = w1string;
                                 m_sortListView.Items[index].SubItems[3].Text = w2string;
-                                m_sortListView.Items[index].SubItems[8+2].Text = item.count.ToString();
-                                m_sortListView.Items[index].SubItems[9+2].Text = item.antennaPort.ToString();
+                                m_sortListView.Items[index].SubItems[8 + 2].Text = item.count.ToString();
+                                m_sortListView.Items[index].SubItems[9 + 2].Text = item.antennaPort.ToString();
                                 m_sortListView.Items[index].Tag = Environment.TickCount;
                                 m_sortListView.Items[index].ForeColor = Color.Green;
                             }
@@ -1238,7 +1231,7 @@ namespace CS203_CALLBACK_API_DEMO
             m_colhdrAntennaPort = new Custom.Control.SortColumnHeader();
             m_colhdrFreqChannel = new Custom.Control.SortColumnHeader();
             m_colhdrCrc16 = new Custom.Control.SortColumnHeader();
-            m_sortListView.Columns.AddRange(new ColumnHeader[] { 
+            m_sortListView.Columns.AddRange(new ColumnHeader[] {
                 m_colhdrIndex,
                 m_colhdrPc,
                 m_colhdrXPc_W1,
@@ -1246,10 +1239,10 @@ namespace CS203_CALLBACK_API_DEMO
                 m_colhdrEpc,
                 m_colhdrTid,
                 m_colhdrUser,
-                m_colhdrRssi, 
-                m_colhdrminRssi, 
-                m_colhdrmaxRssi, 
-                m_colhdrCount, 
+                m_colhdrRssi,
+                m_colhdrminRssi,
+                m_colhdrmaxRssi,
+                m_colhdrCount,
                 m_colhdrAntennaPort,
                 m_colhdrFreqChannel,
                 m_colhdrCrc16
@@ -1332,22 +1325,22 @@ namespace CS203_CALLBACK_API_DEMO
         #endregion
 
         #region Button Handle
-        
-        UInt32 elapsedTime = 0; 
+
+        UInt32 elapsedTime = 0;
         public void Start()
         {
             elapsedTime = 0;
 
             TagLogFile_SetName();
 
-            this.BeginInvoke((System.Threading.ThreadStart)delegate()
+            this.BeginInvoke((System.Threading.ThreadStart)delegate ()
             {
                 m_sortListView.Visible = ControlPanelForm.ControlPanel.checkBox_ShowWindows.Checked;
             });
 
             if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
             {
-                StatisticsReport.SetReportFullName(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, uint.Parse (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogBufferSize.Text));
+                StatisticsReport.SetReportFullName(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, uint.Parse(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogBufferSize.Text));
 
                 uint power = 0;
                 Program.ReaderXP.GetPowerLevel(ref power);
@@ -1601,24 +1594,32 @@ namespace CS203_CALLBACK_API_DEMO
             while (Program.ReaderXP.State != RFState.IDLE)
                 Thread.Sleep(100);
 
-            // Get current profile for debugging read tag = 0
+            StopInventoryDebugInformation();
+        }
+
+        public void MacErrorDebugInformation()
+        {
+            if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
+            {
+                StatisticsReport.WriteLine("Inventory MAC Error {0}", Program.ReaderXP.LastMacErrorCode.ToString("X4") + Environment.NewLine);
+
+                StopInventoryDebugInformation();
+            }
+        }
+
+        public void StopInventoryDebugInformation()
+        {
+            if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
             {
                 uint profile = 99;
+                uint ReversedPower = 99;
 
                 Program.ReaderXP.GetCurrentLinkProfile(ref profile);
-                if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
-                {
-                    StatisticsReport.WriteLine("User Stops Inventory : Current profile {0}", profile);
-                    StatisticsReport.Close();
+                StatisticsReport.WriteLine("User Stops Inventory : Current profile {0}", profile);
 
-                    /*
-                    //TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + "\\CycleLog.Txt", true);
-                    TextWriter tw = new StreamWriter(CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.textBox_LogPath.Text + CycleLogFileName, true);
-
-                    tw.WriteLine("Stop Inventory : Current profile {0}", profile);
-
-                    tw.Close();*/
-                }
+                Program.ReaderXP.GetReversedPowerLevel(ref ReversedPower);
+                StatisticsReport.WriteLine("Reversed Power Level : {0} (dBm)", (ReversedPower / 10f).ToString("F1"));
+                StatisticsReport.Close();
             }
         }
 

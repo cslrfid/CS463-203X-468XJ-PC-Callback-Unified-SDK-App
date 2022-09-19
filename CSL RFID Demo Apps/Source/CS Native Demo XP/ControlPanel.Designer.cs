@@ -78,7 +78,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(125, 845);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(125, 847);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -196,7 +196,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.checkBox_ShowWindows.AutoSize = true;
             this.checkBox_ShowWindows.Checked = true;
             this.checkBox_ShowWindows.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_ShowWindows.Location = new System.Drawing.Point(12, 259);
+            this.checkBox_ShowWindows.Location = new System.Drawing.Point(12, 255);
             this.checkBox_ShowWindows.Name = "checkBox_ShowWindows";
             this.checkBox_ShowWindows.Size = new System.Drawing.Size(100, 17);
             this.checkBox_ShowWindows.TabIndex = 24;
@@ -239,7 +239,7 @@ namespace CS203_CALLBACK_API_DEMO
             // checkBox_GroupTags
             // 
             this.checkBox_GroupTags.AutoSize = true;
-            this.checkBox_GroupTags.Location = new System.Drawing.Point(12, 260);
+            this.checkBox_GroupTags.Location = new System.Drawing.Point(12, 278);
             this.checkBox_GroupTags.Name = "checkBox_GroupTags";
             this.checkBox_GroupTags.Size = new System.Drawing.Size(15, 14);
             this.checkBox_GroupTags.TabIndex = 19;
@@ -292,6 +292,8 @@ namespace CS203_CALLBACK_API_DEMO
             // checkBoxLog
             // 
             this.checkBoxLog.AutoSize = true;
+            this.checkBoxLog.Checked = true;
+            this.checkBoxLog.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxLog.Location = new System.Drawing.Point(12, 313);
             this.checkBoxLog.Name = "checkBoxLog";
             this.checkBoxLog.Size = new System.Drawing.Size(72, 17);

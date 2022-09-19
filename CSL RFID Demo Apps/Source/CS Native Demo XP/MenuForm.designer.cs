@@ -45,7 +45,6 @@ namespace CS203_CALLBACK_API_DEMO
             this.lb_freqtype = new System.Windows.Forms.Label();
             this.lb_profile = new System.Windows.Forms.Label();
             this.lb_power = new System.Windows.Forms.Label();
-            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_c51bldr = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,6 +78,8 @@ namespace CS203_CALLBACK_API_DEMO
             this.buttonOnOffTest = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
+            this.button16 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -260,18 +261,6 @@ namespace CS203_CALLBACK_API_DEMO
             this.lb_power.Size = new System.Drawing.Size(82, 13);
             this.lb_power.TabIndex = 1;
             this.lb_power.Text = "Power : 30 dBm";
-            // 
-            // pb_logo
-            // 
-            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
-            this.pb_logo.Location = new System.Drawing.Point(267, 429);
-            this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(209, 71);
-            this.pb_logo.TabIndex = 12;
-            this.pb_logo.TabStop = false;
-            this.pb_logo.MouseLeave += new System.EventHandler(this.pb_logo_MouseLeave);
-            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
-            this.pb_logo.MouseEnter += new System.EventHandler(this.pb_logo_MouseEnter);
             // 
             // label2
             // 
@@ -569,7 +558,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label_BootloaderMode.ForeColor = System.Drawing.Color.Red;
             this.label_BootloaderMode.Location = new System.Drawing.Point(439, 132);
             this.label_BootloaderMode.Name = "label_BootloaderMode";
-            this.label_BootloaderMode.Size = new System.Drawing.Size(95, 12);
+            this.label_BootloaderMode.Size = new System.Drawing.Size(94, 13);
             this.label_BootloaderMode.TabIndex = 35;
             this.label_BootloaderMode.Text = "(Bootloader Mode)";
             this.label_BootloaderMode.Visible = false;
@@ -663,6 +652,31 @@ namespace CS203_CALLBACK_API_DEMO
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
+            this.pb_logo.Location = new System.Drawing.Point(267, 429);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(209, 71);
+            this.pb_logo.TabIndex = 12;
+            this.pb_logo.TabStop = false;
+            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
+            this.pb_logo.MouseEnter += new System.EventHandler(this.pb_logo_MouseEnter);
+            this.pb_logo.MouseLeave += new System.EventHandler(this.pb_logo_MouseLeave);
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button16.Location = new System.Drawing.Point(130, 366);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(112, 27);
+            this.button16.TabIndex = 43;
+            this.button16.Text = "Reflected Power";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -670,6 +684,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(547, 500);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.buttonOnOffTest);
@@ -720,6 +735,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.Controls.Add(this.btn_inv);
             this.Controls.Add(this.btn_writeany);
             this.Controls.Add(this.btn_rw);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -786,5 +802,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Button buttonOnOffTest;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }

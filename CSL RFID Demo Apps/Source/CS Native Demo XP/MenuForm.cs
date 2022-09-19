@@ -523,7 +523,6 @@ namespace CS203_CALLBACK_API_DEMO
                 InvForm.ShowDialog();
             }
             this.Show();
-
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -537,6 +536,16 @@ namespace CS203_CALLBACK_API_DEMO
                 rw.ShowDialog();
             }
             UpdatePower();
+            this.Show();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (FormReflectedPowerTest InvForm = new FormReflectedPowerTest())
+            {
+                InvForm.ShowDialog();
+            }
             this.Show();
         }
     }

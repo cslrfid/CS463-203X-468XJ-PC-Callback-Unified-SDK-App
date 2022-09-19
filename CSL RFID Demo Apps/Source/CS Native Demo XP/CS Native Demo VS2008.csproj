@@ -49,6 +49,16 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;WIN32;CS468;NET_BUILD;NOT_PRODUCTIONTOOLS</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -142,6 +152,12 @@
     </Compile>
     <Compile Include="FormOnOffTest.Designer.cs">
       <DependentUpon>FormOnOffTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReflectedPowerTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReflectedPowerTest.Designer.cs">
+      <DependentUpon>FormReflectedPowerTest.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPerformanceTest.cs">
       <SubType>Form</SubType>
@@ -543,6 +559,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustProgressBar\ProgressBar.resx">
       <DependentUpon>ProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReflectedPowerTest.resx">
+      <DependentUpon>FormReflectedPowerTest.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="IPTextBox.resx">
