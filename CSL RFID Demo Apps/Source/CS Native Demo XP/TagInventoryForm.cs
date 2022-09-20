@@ -52,6 +52,8 @@ namespace CS203_CALLBACK_API_DEMO
 
         private bool SaveSQL = false;
 
+        private int _currentPort = -1;
+
         public enum ButtonState : int
         {
             Start = 0,
@@ -280,7 +282,7 @@ namespace CS203_CALLBACK_API_DEMO
                         Program.ReaderXP.Options.TagRanging.flags |= CSLibrary.Constants.SelectFlags.POSTMATCH;
                     }
 
-
+                    _currentPort = -1;
                     StatisticsReport.WriteLine("Application Restarts Inventory");
                     Program.ReaderXP.StartOperation(Operation.TAG_RANGING, false);
 
@@ -833,6 +835,12 @@ namespace CS203_CALLBACK_API_DEMO
                     }
                     else
                     {
+                        if (_currentPort != e.info.antennaPort)
+                        {
+                            _currentPort = (int)e.info.antennaPort;
+                            StatisticsReport.WriteLine("First Tag Antenna Port {0}", _currentPort.ToString());
+                        }
+
                         if (CS203_CALLBACK_API_DEMO.ControlPanelForm.ControlPanel.radioButton_dBm.Checked)
                             e.info.rssi -= 106.989F;
 
@@ -1523,6 +1531,7 @@ namespace CS203_CALLBACK_API_DEMO
                 Program.ReaderXP.Options.TagRanging.retry = uint.Parse(ControlPanelForm.ControlPanel.textBox_RetryCount.Text);
                 tmr_updatelist_Tick(null, null); // reset display counter
                 timer_ElapsedTime.Enabled = true;
+                _currentPort = -1;
                 Program.ReaderXP.StartOperation(Operation.TAG_RANGING, false);
             }
         }
@@ -1580,6 +1589,7 @@ namespace CS203_CALLBACK_API_DEMO
 
                 Program.ReaderXP.Options.TagRanging.retry = uint.Parse(ControlPanelForm.ControlPanel.textBox_RetryCount.Text);
                 tmr_updatelist_Tick(null, null); // reset display counter
+                _currentPort = -1;
                 Program.ReaderXP.StartOperation(Operation.TAG_RANGING, false);
             }
         }
@@ -1616,7 +1626,6 @@ namespace CS203_CALLBACK_API_DEMO
 
                 Program.ReaderXP.GetCurrentLinkProfile(ref profile);
                 StatisticsReport.WriteLine("User Stops Inventory : Current profile {0}", profile);
-
                 Program.ReaderXP.GetReversedPowerLevel(ref ReversedPower);
                 StatisticsReport.WriteLine("Reversed Power Level : {0} (dBm)", (ReversedPower / 10f).ToString("F1"));
                 StatisticsReport.Close();
