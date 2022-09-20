@@ -1612,7 +1612,7 @@ namespace CS203_CALLBACK_API_DEMO
             if (ControlPanelForm.ControlPanel.checkBoxLog.Checked)
             {
                 uint profile = 99;
-                uint ReversedPower = 99;
+                int ReversedPower = 99;
 
                 Program.ReaderXP.GetCurrentLinkProfile(ref profile);
                 StatisticsReport.WriteLine("User Stops Inventory : Current profile {0}", profile);

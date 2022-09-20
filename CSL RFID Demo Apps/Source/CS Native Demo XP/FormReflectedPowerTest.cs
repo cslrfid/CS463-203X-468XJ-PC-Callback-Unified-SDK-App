@@ -162,7 +162,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
@@ -193,7 +193,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
@@ -219,7 +219,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
@@ -245,7 +245,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button4_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
@@ -271,7 +271,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button5_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
@@ -315,7 +315,7 @@ namespace CS203_CALLBACK_API_DEMO
 
         private void button6_Click(object sender, EventArgs e)
         {
-            uint rp = 0;
+            int rp = 0;
             _tagNumber = 0;
             _lastFreqChannel = 99;
 
