@@ -342,6 +342,8 @@ DEINIT:
             if (Program.ReaderXP.OEMDeviceType == Machine.CS203X)
             {
                 appSetting.AntennaList[0].State = AntennaPortState.DISABLED;
+                appSetting.AntennaList[1].State = AntennaPortState.DISABLED;
+                appSetting.AntennaList[2].State = AntennaPortState.DISABLED;
                 appSetting.AntennaList[3].State = AntennaPortState.ENABLED;
             
                 if (appSetting.AntennaList.Store(ReaderXP) != Result.OK)

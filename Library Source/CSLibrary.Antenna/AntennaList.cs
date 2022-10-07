@@ -78,6 +78,13 @@ namespace CSLibrary
                     DEFAULT_ANTENNA_LIST.Add(new Antenna(3, AntennaPortState.DISABLED, 300, 2000, 0, 12, 12, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
                     break;
 
+                case Machine.CS203X:
+                    DEFAULT_ANTENNA_LIST.Add(new Antenna(0, AntennaPortState.DISABLED, 300, 2000, 0, 0, 0, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
+                    DEFAULT_ANTENNA_LIST.Add(new Antenna(1, AntennaPortState.DISABLED, 300, 2000, 0, 4, 4, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
+                    DEFAULT_ANTENNA_LIST.Add(new Antenna(2, AntennaPortState.DISABLED, 300, 2000, 0, 8, 8, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
+                    DEFAULT_ANTENNA_LIST.Add(new Antenna(3, AntennaPortState.ENABLED, 300, 2000, 0, 12, 12, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
+                    break;
+
                 case Machine.CS468:
                 case Machine.CS468INT:
                     DEFAULT_ANTENNA_LIST.Add(new Antenna(0, AntennaPortState.ENABLED, 300, 2000, 0, 0, 0, false, false, SingulationAlgorithm.DYNAMICQ, 0, false, 0, false, 0, 1048575));
