@@ -523,10 +523,11 @@ namespace CSLibrary.Constants
         /// Taiwan
         /// </summary>
         TW,
+        TW2,
         /// <summary>
         /// Korea
         /// </summary>
-         KR,
+        KR,
         /// <summary>
         /// Hong Kong
         /// </summary>
