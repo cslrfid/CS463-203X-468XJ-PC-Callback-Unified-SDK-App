@@ -897,8 +897,17 @@ namespace CSLibrary
                                 // Command-End Packet
                                 case 0x0001:
                                     ErrorPort = (UInt16)(COMM_HostCommand_RecvBuf[14] | (COMM_HostCommand_RecvBuf[15] << 8));
+                                    LastMacErrorCode = (UInt16)(COMM_HostCommand_RecvBuf[12] | (COMM_HostCommand_RecvBuf[13] << 8));
+
                                     if (ProcFlow == 1)
                                         ProcFlow = 2;
+
+                                    if (_EngineeringTest_Operation != 0 && LastMacErrorCode != 0)
+                                    {
+                                        _EngineeringTest_Operation = 0;
+                                        FireStateChangedEvent(RFState.IDLE);
+                                    }
+
                                     break;
 
                                 // Inventory-Response Packet

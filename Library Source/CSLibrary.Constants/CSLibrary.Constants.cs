@@ -672,6 +672,10 @@ namespace CSLibrary.Constants
         /// </summary>
         VI,
         /// <summary>
+        /// Mexico
+        /// </summary>
+        MX,
+        /// <summary>
         /// Unknow Country
         /// </summary>
         UNKNOWN = 0,
