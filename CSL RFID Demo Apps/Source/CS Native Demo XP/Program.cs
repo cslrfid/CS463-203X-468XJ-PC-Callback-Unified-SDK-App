@@ -237,6 +237,7 @@ namespace CS203_CALLBACK_API_DEMO
                         LoadDefaultSettings();
                 }
 
+
                 //Open MainForm and EnableVisualStyles
                 Application.Run(new MenuForm());
 

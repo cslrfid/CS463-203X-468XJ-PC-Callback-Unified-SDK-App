@@ -80,6 +80,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.button15 = new System.Windows.Forms.Button();
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -655,7 +656,7 @@ namespace CS203_CALLBACK_API_DEMO
             // pb_logo
             // 
             this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
-            this.pb_logo.Location = new System.Drawing.Point(267, 429);
+            this.pb_logo.Location = new System.Drawing.Point(302, 429);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(209, 71);
             this.pb_logo.TabIndex = 12;
@@ -677,6 +678,19 @@ namespace CS203_CALLBACK_API_DEMO
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button17.Location = new System.Drawing.Point(130, 399);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(112, 27);
+            this.button17.TabIndex = 44;
+            this.button17.Text = "REF Power-16";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -684,6 +698,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(547, 500);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -803,5 +818,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
     }
 }

@@ -548,5 +548,16 @@ namespace CS203_CALLBACK_API_DEMO
             }
             this.Show();
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (FormReflectedPowerTest16Ports InvForm = new FormReflectedPowerTest16Ports())
+            {
+                InvForm.ShowDialog();
+            }
+            this.Show();
+
+        }
     }
 }
