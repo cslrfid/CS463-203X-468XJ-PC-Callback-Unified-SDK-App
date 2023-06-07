@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer Demo Program - PC"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSLibrary", "CSLibrary", "{699513B0-590A-44AD-BB09-27D5E30E832E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLibrary - NET3.5", "Library Source\CSLibrary - NET3.5.csproj", "{9E398038-289E-4E94-B26F-63A51925BBA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLibrary - NET4", "Library Source\CSLibrary - NET4.csproj", "{9E398038-289E-4E94-B26F-63A51925BBA4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSL CheckStatus VS2008", "CSL RFID Demo Apps\Source\CSL CheckStatus\CSL CheckStatus VS2008.csproj", "{DCCDCD44-F22A-4071-A7D3-9D149CBBE835}"
 EndProject
