@@ -42,8 +42,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\VS2008 Release\</OutputPath>
-    <DefineConstants>TRACE;WIN32;CS468;NET_BUILD;NOT_PRODUCTIONTOOLS</DefineConstants>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>WIN32;CS468;NET_BUILD;NOT_PRODUCTIONTOOLS</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <Optimize>true</Optimize>
     <DebugType>full</DebugType>
@@ -54,8 +54,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;WIN32;CS468;NET_BUILD;NOT_PRODUCTIONTOOLS</DefineConstants>
-    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;WIN32;CS468;NET_BUILD;NOT_PRODUCTIONTOOLS</DefineConstants>
+    <Optimize>true</Optimize>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>7.3</LangVersion>
@@ -657,22 +657,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="CSLibrary, Version=3.0.133.0, Culture=neutral, PublicKeyToken=68116d4775cb862a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="CSLibrary.Data.SQLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="CSLibrary.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68116d4775cb862a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.Diagnostics.dll</HintPath>
-    </Reference>
-    <Reference Include="CSLibrary.Windows, Version=1.0.4666.19603, Culture=neutral, PublicKeyToken=68116d4775cb862a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -907,5 +891,23 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary.Data.SQLite\CSLibrary.Data.SQLite - NET4.csproj">
+      <Project>{c87b2455-9388-4bd1-b513-bb5be3bfcddf}</Project>
+      <Name>CSLibrary.Data.SQLite - NET4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary.Diagnostics\CSLibrary.Diagnostics - NET4.csproj">
+      <Project>{020354ee-5073-4bb5-9aa2-a7eada8cad09}</Project>
+      <Name>CSLibrary.Diagnostics - NET4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary.Windows\CSLibrary.Windows - NET4.csproj">
+      <Project>{3fd3efea-4bb2-4eee-ab96-1984276c3b5a}</Project>
+      <Name>CSLibrary.Windows - NET4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary\CSLibrary - NET4.csproj">
+      <Project>{9e398038-289e-4e94-b26f-63a51925bba4}</Project>
+      <Name>CSLibrary - NET4</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

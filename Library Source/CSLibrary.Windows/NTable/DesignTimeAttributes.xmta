@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes xmlns="http://schemas.microsoft.com/VisualStudio/2004/03/SmartDevices/XMTA.xsd">
+  <Class Name="CSLibrary.Windows.UI.NTable">
+    <DesktopCompatible>true</DesktopCompatible>
+    <DesignTimeVisible>true</DesignTimeVisible>
+  </Class>
+</Classes>

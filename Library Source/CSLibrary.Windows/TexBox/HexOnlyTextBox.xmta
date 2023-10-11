@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes xmlns="http://schemas.microsoft.com/VisualStudio/2004/03/SmartDevices/XMTA.xsd">
+  <Class Name="CSLibrary.Windows.HexOnlyTextBox">
+
+    <!-- <Class> -->
+    <DefaultProperty>HexOnlyTextBox</DefaultProperty>
+
+    <Description>Only accept hexadecimal input textbox control.</Description>
+
+    <ToolboxBitmap>CSLibrary.Windows.HexOnlyTextBox</ToolboxBitmap>
+
+    <DesktopCompatible>true</DesktopCompatible>
+
+    <DesignTimeVisible>true</DesignTimeVisible>
+
+    <!-- <Class> -->
+
+    <!-- <Properties> -->
+
+    <Property Name="PaddingZero">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Boolean, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>true</Value>
+      </DefaultValue>
+      <Description>
+        if true, Zero will be paded at the reminding part. Otherwise, "X" will be padded.
+      </Description>
+    </Property>
+
+    <Property Name="FontColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>Black</Value>
+      </DefaultValue>
+      <Description>The font color of the textbox.</Description>
+    </Property>
+
+    <Property Name="BackgroundText">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.String, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+      </DefaultValue>
+      <Description>The background text of the textbox.</Description>
+    </Property>
+    
+    <Property Name="MaxLength">
+    <Localizable>true</Localizable>
+    <DefaultValue>
+      <Type>System.int, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+      <Value>24</Value>
+    </DefaultValue>
+    <Description>The background text of the textbox.</Description>
+    </Property>
+
+    <Property Name="Size">
+      <Localizable>true</Localizable>
+      <DefaultValue>
+        <Type>System.Drawing.Size, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>100, 23</Value>
+      </DefaultValue>
+    </Property>
+
+    <!-- <Properties> -->
+
+
+  </Class>
+</Classes>

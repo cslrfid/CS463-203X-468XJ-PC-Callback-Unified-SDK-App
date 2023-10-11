@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes xmlns="http://schemas.microsoft.com/VisualStudio/2004/03/SmartDevices/XMTA.xsd">
+  <Class Name="CSLibrary.Windows.HScrollBarEx">
+    
+    <!-- <Class> -->
+    <DefaultProperty>HScrollBarEx</DefaultProperty>
+
+    <Description>Enables its parent component to scroll content horizontally.</Description>
+
+    <ToolboxBitmap>CSLibrary.Windows.HScrollBarEx</ToolboxBitmap>
+
+    <DesktopCompatible>true</DesktopCompatible>
+    
+    <DesignTimeVisible>true</DesignTimeVisible>
+
+    <!-- <Class> -->
+
+    <!-- <Properties> -->
+
+    <Property Name="LargeChange">
+      <Category>Behavior</Category>
+      <DefaultValue>
+        <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>10</Value>
+      </DefaultValue>
+      <Description>
+        The Change in the position of thumb when user clicks in the scroll bar area or uses PgUp/PgDn.
+      </Description>
+    </Property>
+
+    <Property Name="SmallChange">
+      <Category>Behavior</Category>
+      <DefaultValue>
+        <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>1</Value>
+      </DefaultValue>
+      <Description>The Change in the position of thumb when user clicks in the scroll bar area or uses PgUp/PgDn.</Description>
+    </Property>
+
+    <Property Name="Minimum">
+      <Category>Behavior</Category>
+      <DefaultValue>
+        <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>0</Value>
+      </DefaultValue>
+      <Description>The minimum position of the thumb.</Description>
+    </Property>
+
+    <Property Name="Maximum">
+      <Category>Behavior</Category>
+      <DefaultValue>
+        <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>100</Value>
+      </DefaultValue>
+      <Description>The maximum position of the thumb.</Description>
+    </Property>
+
+    <Property Name="Value">
+      <Category>Behavior</Category>
+      <DefaultValue>
+        <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>0</Value>
+      </DefaultValue>
+      <Description>The position of the thumb.</Description>
+    </Property>
+
+    <Property Name="ChannelColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>LimeGreen</Value>
+      </DefaultValue>
+      <Description>The channel color.</Description>
+    </Property>
+
+    <Property Name="LeftArrowImage">
+      <Category>Appearance</Category>
+      <Description>The left arrow Image.</Description>
+    </Property>
+
+    <Property Name="RightArrowImage">
+      <Category>Appearance</Category>
+      <Description>The right arrow Image.</Description>
+    </Property>
+
+    <Property Name="ThumbLeftImage">
+      <Category>Appearance</Category>
+      <Description>The thumb left Image.</Description>
+    </Property>
+
+    <Property Name="ThumbRightImage">
+      <Category>Appearance</Category>
+      <Description>The thumb right Image.</Description>
+    </Property>
+
+    <Property Name="ThumbLeftSpanImage">
+      <Category>Appearance</Category>
+      <Description>The thumb left span Image.</Description>
+    </Property>
+
+    <Property Name="ThumbRightSpanImage">
+      <Category>Appearance</Category>
+      <Description>The thumb right span Image.</Description>
+    </Property>
+
+    <Property Name="ThumbMiddleImage">
+      <Category>Appearance</Category>
+      <Description>The thumb middle Image.</Description>
+    </Property>
+    
+    <Property Name="MinimumSize">
+      <Category>Layout</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Size, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+      </DefaultValue>
+      <Description>Minimum size of the control you can set.</Description>
+    </Property>
+    
+    <Property Name="Size">
+      <Localizable>true</Localizable>
+      <DefaultValue>
+        <Type>System.Drawing.Size, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>15, 150</Value>
+      </DefaultValue>
+    </Property>
+    
+    <!-- <Properties> -->
+
+
+  </Class>
+</Classes>

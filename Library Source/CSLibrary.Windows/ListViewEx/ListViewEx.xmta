@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes xmlns="http://schemas.microsoft.com/VisualStudio/2004/03/SmartDevices/XMTA.xsd">
+  <Class Name="CSLibrary.Windows.ListViewCustomDraw">
+    
+    <!-- <Class> -->
+    <DefaultEvent>Click</DefaultEvent>
+
+    <DefaultProperty>Text</DefaultProperty>
+
+    <Description>Represents a listview control.</Description>
+
+    <DesktopCompatible>true</DesktopCompatible>
+    
+    <DesignTimeVisible>true</DesignTimeVisible>
+
+    <!-- <Class> -->
+    
+    <!-- <Properties> -->
+    
+    <Property Name="GridLines">
+      <DefaultValue>
+        <Type>System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        <Value>False</Value>
+      </DefaultValue>
+    </Property>
+
+    <Property Name="DoubleBuffering">
+      <DefaultValue>
+        <Type>System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        <Value>False</Value>
+      </DefaultValue>
+    </Property>
+
+    <Property Name="Gradient">
+      <DefaultValue>
+        <Type>System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        <Value>False</Value>
+      </DefaultValue>
+    </Property>
+    <!-- <Properties> -->
+
+
+  </Class>
+</Classes>
