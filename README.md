@@ -5,11 +5,11 @@ Programming interface made available to developers for configuring, controlling 
 ## Pre-requisite
 
 Operating System requirement: 
-- Microsoft Windows 10
+- Microsoft Windows 10/11
  
 Software package required: 
-- Microsoft Visual Studio 2017 or later
-- Microsoft .Net Framework 3.5 or above 
+- Microsoft Visual Studio 2019 or later
+- Microsoft .Net Framework 4 or above 
 
 
 
