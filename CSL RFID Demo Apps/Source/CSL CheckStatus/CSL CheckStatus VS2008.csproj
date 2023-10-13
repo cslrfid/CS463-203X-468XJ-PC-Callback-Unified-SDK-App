@@ -33,33 +33,23 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'VS2008 Release|AnyCPU' ">
-    <OutputPath>bin\VS2008 Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSLibrary, Version=3.0.87.0, Culture=neutral, PublicKeyToken=68116d4775cb862a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="CSLibrary.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68116d4775cb862a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Release Libraries\WindowsXP\NET3.5\CSLibrary.Diagnostics.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -130,6 +120,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary.Diagnostics\CSLibrary.Diagnostics - NET4.csproj">
+      <Project>{020354ee-5073-4bb5-9aa2-a7eada8cad09}</Project>
+      <Name>CSLibrary.Diagnostics - NET4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library Source\CSLibrary\CSLibrary - NET4.csproj">
+      <Project>{9e398038-289e-4e94-b26f-63a51925bba4}</Project>
+      <Name>CSLibrary - NET4</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,209 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FD3EFEA-4BB2-4EEE-AB96-1984276C3B5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSLibrary.Windows</RootNamespace>
+    <AssemblyName>CSLibrary.Windows</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/CSLibrary.Windows/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CSLibrary.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\CSL RFID Demo Apps\Release Libraries\NET4\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\CSL RFID Demo Apps\Release Libraries\NET4\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include=".\Button\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".\GdiPlus.cs">
+    </Compile>
+    <Compile Include=".\NTable\INTableCellEditor.cs">
+    </Compile>
+    <Compile Include=".\NTable\INTableCellRenderer.cs">
+    </Compile>
+    <Compile Include=".\NTable\INTableModel.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".\NTable\NTableCell.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableColumn.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableCurrencyCellRenderer.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableDefaultCellEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".\NTable\NTableDefaultCellRenderer.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableDefaultHeaderRenderer.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableDragAndDrop.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableDrawControl.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableImageCellRenderer.cs">
+    </Compile>
+    <Compile Include=".\NTable\NTableListModel.cs">
+    </Compile>
+    <Compile Include=".\Scrollbar\HScrollBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".\Scrollbar\VScrollBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".\SplashScreen\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".\SplashScreen\SplashScreen.designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include=".\TexBox\HexOnlyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NTable\NTableComboboxCellEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".\SplashScreen\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".\Button\RoundButton.bmp">
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\Button\RoundButton.xmta">
+    </None>
+    <None Include=".\Scrollbar\HScrollBarEx.xmta">
+    </None>
+    <None Include=".\Scrollbar\VScrollBarEx.xmta">
+    </None>
+    <None Include=".\TexBox\HexOnlyTextBox.xmta">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".\Scrollbar\HScrollBarEx.bmp">
+    </EmbeddedResource>
+    <EmbeddedResource Include=".\Scrollbar\VScrollBarEx.bmp">
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".\TexBox\HexOnlyTextBox.bmp">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSLibrary.snk" />
+    <None Include="Resources\HLeftArrow.png" />
+    <None Include="Resources\HRightArrow.png" />
+    <None Include="Resources\HThumbBottom.png" />
+    <None Include="Resources\HThumbMiddle.png" />
+    <None Include="Resources\HThumbSpanBottom.png" />
+    <None Include="Resources\HThumbSpanTop.png" />
+    <None Include="Resources\HThumbTop.png" />
+    <None Include="Resources\VDownArrow.png" />
+    <None Include="Resources\VThumbBottom.png" />
+    <None Include="Resources\VThumbMiddle.png" />
+    <None Include="Resources\VThumbSpanBottom.png" />
+    <None Include="Resources\VThumbSpanTop.png" />
+    <None Include="Resources\VThumbTop.png" />
+    <None Include="Resources\VUpArrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

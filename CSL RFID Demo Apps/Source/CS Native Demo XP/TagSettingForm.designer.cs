@@ -184,7 +184,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.nb_power = new System.Windows.Forms.NumericUpDown();
             this.lb_POWER = new System.Windows.Forms.Label();
             this.btn_apply = new System.Windows.Forms.Button();
-            this.ts_status = new System.Windows.Forms.StatusBar();
+            this.ts_status = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tp_gerenal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nb_reconnectTimeout)).BeginInit();
@@ -270,7 +270,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_ReversePowerThreshold.Location = new System.Drawing.Point(72, 124);
             this.textBox_ReversePowerThreshold.Name = "textBox_ReversePowerThreshold";
-            this.textBox_ReversePowerThreshold.Size = new System.Drawing.Size(97, 22);
+            this.textBox_ReversePowerThreshold.Size = new System.Drawing.Size(97, 20);
             this.textBox_ReversePowerThreshold.TabIndex = 92;
             // 
             // label29
@@ -278,7 +278,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(8, 108);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(124, 12);
+            this.label29.Size = new System.Drawing.Size(130, 13);
             this.label29.TabIndex = 91;
             this.label29.Text = "Reverse Power Threshold";
             // 
@@ -287,7 +287,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.checkBoxFreqAgile.AutoSize = true;
             this.checkBoxFreqAgile.Location = new System.Drawing.Point(471, 30);
             this.checkBoxFreqAgile.Name = "checkBoxFreqAgile";
-            this.checkBoxFreqAgile.Size = new System.Drawing.Size(108, 16);
+            this.checkBoxFreqAgile.Size = new System.Drawing.Size(109, 17);
             this.checkBoxFreqAgile.TabIndex = 87;
             this.checkBoxFreqAgile.Text = "Enable Freq Agile";
             this.checkBoxFreqAgile.UseVisualStyleBackColor = true;
@@ -322,7 +322,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.lbOperationConfig.AutoSize = true;
             this.lbOperationConfig.Location = new System.Drawing.Point(11, 182);
             this.lbOperationConfig.Name = "lbOperationConfig";
-            this.lbOperationConfig.Size = new System.Drawing.Size(87, 12);
+            this.lbOperationConfig.Size = new System.Drawing.Size(86, 13);
             this.lbOperationConfig.TabIndex = 84;
             this.lbOperationConfig.TabStop = true;
             this.lbOperationConfig.Text = "Operation Config";
@@ -333,7 +333,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.lk_antenna_port_cfg.AutoSize = true;
             this.lk_antenna_port_cfg.Location = new System.Drawing.Point(186, 30);
             this.lk_antenna_port_cfg.Name = "lk_antenna_port_cfg";
-            this.lk_antenna_port_cfg.Size = new System.Drawing.Size(102, 12);
+            this.lk_antenna_port_cfg.Size = new System.Drawing.Size(102, 13);
             this.lk_antenna_port_cfg.TabIndex = 84;
             this.lk_antenna_port_cfg.TabStop = true;
             this.lk_antenna_port_cfg.Text = "Antenna Port Config";
@@ -382,14 +382,14 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.cb_linkprofile.Location = new System.Drawing.Point(72, 10);
             this.cb_linkprofile.Name = "cb_linkprofile";
-            this.cb_linkprofile.Size = new System.Drawing.Size(97, 20);
+            this.cb_linkprofile.Size = new System.Drawing.Size(97, 21);
             this.cb_linkprofile.TabIndex = 71;
             // 
             // cb_freqlist
             // 
             this.cb_freqlist.Location = new System.Drawing.Point(72, 76);
             this.cb_freqlist.Name = "cb_freqlist";
-            this.cb_freqlist.Size = new System.Drawing.Size(97, 20);
+            this.cb_freqlist.Size = new System.Drawing.Size(97, 21);
             this.cb_freqlist.TabIndex = 64;
             this.cb_freqlist.SelectedIndexChanged += new System.EventHandler(this.cb_country_SelectedIndexChanged);
             // 
@@ -397,7 +397,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.cb_country.Location = new System.Drawing.Point(72, 36);
             this.cb_country.Name = "cb_country";
-            this.cb_country.Size = new System.Drawing.Size(97, 20);
+            this.cb_country.Size = new System.Drawing.Size(97, 21);
             this.cb_country.TabIndex = 64;
             this.cb_country.SelectedIndexChanged += new System.EventHandler(this.cb_country_SelectedIndexChanged);
             // 
@@ -410,7 +410,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_reconnectTimeout.Name = "nb_reconnectTimeout";
-            this.nb_reconnectTimeout.Size = new System.Drawing.Size(97, 22);
+            this.nb_reconnectTimeout.Size = new System.Drawing.Size(97, 20);
             this.nb_reconnectTimeout.TabIndex = 61;
             // 
             // label4
@@ -478,7 +478,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label53.AutoSize = true;
             this.label53.Location = new System.Drawing.Point(8, 34);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(50, 12);
+            this.label53.Size = new System.Drawing.Size(55, 13);
             this.label53.TabIndex = 28;
             this.label53.Text = "TagFocus";
             // 
@@ -487,7 +487,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.checkBox_focusmode.AutoSize = true;
             this.checkBox_focusmode.Location = new System.Drawing.Point(95, 34);
             this.checkBox_focusmode.Name = "checkBox_focusmode";
-            this.checkBox_focusmode.Size = new System.Drawing.Size(56, 16);
+            this.checkBox_focusmode.Size = new System.Drawing.Size(59, 17);
             this.checkBox_focusmode.TabIndex = 27;
             this.checkBox_focusmode.Text = "Enable";
             this.checkBox_focusmode.UseVisualStyleBackColor = true;
@@ -514,7 +514,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_MaskLength.Location = new System.Drawing.Point(180, 31);
             this.textBox_MaskLength.Name = "textBox_MaskLength";
-            this.textBox_MaskLength.Size = new System.Drawing.Size(61, 22);
+            this.textBox_MaskLength.Size = new System.Drawing.Size(61, 20);
             this.textBox_MaskLength.TabIndex = 2;
             this.textBox_MaskLength.Text = "0";
             // 
@@ -522,7 +522,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_MaskOffset.Location = new System.Drawing.Point(113, 31);
             this.textBox_MaskOffset.Name = "textBox_MaskOffset";
-            this.textBox_MaskOffset.Size = new System.Drawing.Size(61, 22);
+            this.textBox_MaskOffset.Size = new System.Drawing.Size(61, 20);
             this.textBox_MaskOffset.TabIndex = 1;
             this.textBox_MaskOffset.Text = "0";
             // 
@@ -536,14 +536,14 @@ namespace CS203_CALLBACK_API_DEMO
             "USER"});
             this.comboBox_MaskBank.Location = new System.Drawing.Point(6, 33);
             this.comboBox_MaskBank.Name = "comboBox_MaskBank";
-            this.comboBox_MaskBank.Size = new System.Drawing.Size(101, 20);
+            this.comboBox_MaskBank.Size = new System.Drawing.Size(101, 21);
             this.comboBox_MaskBank.TabIndex = 0;
             // 
             // textBox_Mask
             // 
             this.textBox_Mask.Location = new System.Drawing.Point(6, 71);
             this.textBox_Mask.Name = "textBox_Mask";
-            this.textBox_Mask.Size = new System.Drawing.Size(268, 22);
+            this.textBox_Mask.Size = new System.Drawing.Size(268, 20);
             this.textBox_Mask.TabIndex = 7;
             // 
             // label16
@@ -551,7 +551,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(6, 56);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 12);
+            this.label16.Size = new System.Drawing.Size(58, 13);
             this.label16.TabIndex = 6;
             this.label16.Text = "HEX Mask";
             // 
@@ -560,7 +560,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(178, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 12);
+            this.label15.Size = new System.Drawing.Size(55, 13);
             this.label15.TabIndex = 5;
             this.label15.Text = "Bit Length";
             // 
@@ -569,7 +569,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(111, 18);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 12);
+            this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 4;
             this.label14.Text = "Offset";
             // 
@@ -578,7 +578,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 12);
+            this.label12.Size = new System.Drawing.Size(32, 13);
             this.label12.TabIndex = 3;
             this.label12.Text = "Bank";
             // 
@@ -608,7 +608,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_retry.Name = "nb_retry";
-            this.nb_retry.Size = new System.Drawing.Size(77, 22);
+            this.nb_retry.Size = new System.Drawing.Size(77, 20);
             this.nb_retry.TabIndex = 27;
             // 
             // nb_qvalue
@@ -620,7 +620,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_qvalue.Name = "nb_qvalue";
-            this.nb_qvalue.Size = new System.Drawing.Size(77, 22);
+            this.nb_qvalue.Size = new System.Drawing.Size(77, 20);
             this.nb_qvalue.TabIndex = 26;
             this.nb_qvalue.Value = new decimal(new int[] {
             7,
@@ -684,7 +684,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.nbRssiFilter.Location = new System.Drawing.Point(173, 183);
             this.nbRssiFilter.Name = "nbRssiFilter";
-            this.nbRssiFilter.Size = new System.Drawing.Size(54, 22);
+            this.nbRssiFilter.Size = new System.Drawing.Size(54, 20);
             this.nbRssiFilter.TabIndex = 22;
             this.nbRssiFilter.Value = new decimal(new int[] {
             60,
@@ -736,7 +736,7 @@ namespace CS203_CALLBACK_API_DEMO
             "Toggle (Flag A/B Alternate)"});
             this.cb_target.Location = new System.Drawing.Point(95, 121);
             this.cb_target.Name = "cb_target";
-            this.cb_target.Size = new System.Drawing.Size(153, 20);
+            this.cb_target.Size = new System.Drawing.Size(153, 21);
             this.cb_target.TabIndex = 1;
             this.cb_target.SelectedIndexChanged += new System.EventHandler(this.cb_target_SelectedIndexChanged);
             // 
@@ -747,7 +747,7 @@ namespace CS203_CALLBACK_API_DEMO
             "DYNAMICQ"});
             this.cb_algorithm.Location = new System.Drawing.Point(95, 152);
             this.cb_algorithm.Name = "cb_algorithm";
-            this.cb_algorithm.Size = new System.Drawing.Size(153, 20);
+            this.cb_algorithm.Size = new System.Drawing.Size(153, 21);
             this.cb_algorithm.TabIndex = 6;
             this.cb_algorithm.SelectedIndexChanged += new System.EventHandler(this.cb_algorithm_SelectedIndexChanged);
             // 
@@ -776,7 +776,7 @@ namespace CS203_CALLBACK_API_DEMO
             "S3"});
             this.cb_session.Location = new System.Drawing.Point(95, 90);
             this.cb_session.Name = "cb_session";
-            this.cb_session.Size = new System.Drawing.Size(153, 20);
+            this.cb_session.Size = new System.Drawing.Size(153, 21);
             this.cb_session.TabIndex = 1;
             // 
             // label7
@@ -804,7 +804,7 @@ namespace CS203_CALLBACK_API_DEMO
             "DEASSERTED"});
             this.cb_selected.Location = new System.Drawing.Point(95, 59);
             this.cb_selected.Name = "cb_selected";
-            this.cb_selected.Size = new System.Drawing.Size(153, 20);
+            this.cb_selected.Size = new System.Drawing.Size(153, 21);
             this.cb_selected.TabIndex = 1;
             this.cb_selected.SelectedIndexChanged += new System.EventHandler(this.cb_selected_SelectedIndexChanged);
             // 
@@ -856,7 +856,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_startqvalue.Name = "nb_startqvalue";
-            this.nb_startqvalue.Size = new System.Drawing.Size(77, 22);
+            this.nb_startqvalue.Size = new System.Drawing.Size(77, 20);
             this.nb_startqvalue.TabIndex = 28;
             this.nb_startqvalue.Value = new decimal(new int[] {
             7,
@@ -881,7 +881,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_minqvalue.Name = "nb_minqvalue";
-            this.nb_minqvalue.Size = new System.Drawing.Size(77, 22);
+            this.nb_minqvalue.Size = new System.Drawing.Size(77, 20);
             this.nb_minqvalue.TabIndex = 29;
             // 
             // nb_thresholdMultiplier
@@ -893,7 +893,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_thresholdMultiplier.Name = "nb_thresholdMultiplier";
-            this.nb_thresholdMultiplier.Size = new System.Drawing.Size(77, 22);
+            this.nb_thresholdMultiplier.Size = new System.Drawing.Size(77, 20);
             this.nb_thresholdMultiplier.TabIndex = 30;
             // 
             // label25
@@ -922,7 +922,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.numericUpDown_Retry.Name = "numericUpDown_Retry";
-            this.numericUpDown_Retry.Size = new System.Drawing.Size(77, 22);
+            this.numericUpDown_Retry.Size = new System.Drawing.Size(77, 20);
             this.numericUpDown_Retry.TabIndex = 31;
             // 
             // nb_maxqvalue
@@ -934,7 +934,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_maxqvalue.Name = "nb_maxqvalue";
-            this.nb_maxqvalue.Size = new System.Drawing.Size(77, 22);
+            this.nb_maxqvalue.Size = new System.Drawing.Size(77, 20);
             this.nb_maxqvalue.TabIndex = 27;
             this.nb_maxqvalue.Value = new decimal(new int[] {
             15,
@@ -1188,7 +1188,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.comboBox_TestFrequency.Location = new System.Drawing.Point(27, 77);
             this.comboBox_TestFrequency.Name = "comboBox_TestFrequency";
-            this.comboBox_TestFrequency.Size = new System.Drawing.Size(170, 20);
+            this.comboBox_TestFrequency.Size = new System.Drawing.Size(170, 21);
             this.comboBox_TestFrequency.TabIndex = 65;
             // 
             // label43
@@ -1196,7 +1196,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label43.AutoSize = true;
             this.label43.Location = new System.Drawing.Point(24, 61);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(126, 12);
+            this.label43.Size = new System.Drawing.Size(123, 13);
             this.label43.TabIndex = 8;
             this.label43.Text = "Frequency (MAC 0x10D)";
             // 
@@ -1204,7 +1204,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_TestPLLDACCTL.Location = new System.Drawing.Point(27, 125);
             this.textBox_TestPLLDACCTL.Name = "textBox_TestPLLDACCTL";
-            this.textBox_TestPLLDACCTL.Size = new System.Drawing.Size(169, 22);
+            this.textBox_TestPLLDACCTL.Size = new System.Drawing.Size(169, 20);
             this.textBox_TestPLLDACCTL.TabIndex = 7;
             this.textBox_TestPLLDACCTL.Text = "14070400";
             // 
@@ -1213,7 +1213,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(23, 107);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(142, 12);
+            this.label42.Size = new System.Drawing.Size(133, 13);
             this.label42.TabIndex = 6;
             this.label42.Text = "PLLDACCTL (MAC 0x10E)";
             // 
@@ -1221,7 +1221,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_TestPower.Location = new System.Drawing.Point(27, 179);
             this.textBox_TestPower.Name = "textBox_TestPower";
-            this.textBox_TestPower.Size = new System.Drawing.Size(169, 22);
+            this.textBox_TestPower.Size = new System.Drawing.Size(169, 20);
             this.textBox_TestPower.TabIndex = 5;
             this.textBox_TestPower.Text = "300";
             // 
@@ -1235,7 +1235,7 @@ namespace CS203_CALLBACK_API_DEMO
             "Port 3"});
             this.comboBox_TestAntenna.Location = new System.Drawing.Point(26, 32);
             this.comboBox_TestAntenna.Name = "comboBox_TestAntenna";
-            this.comboBox_TestAntenna.Size = new System.Drawing.Size(171, 20);
+            this.comboBox_TestAntenna.Size = new System.Drawing.Size(171, 21);
             this.comboBox_TestAntenna.TabIndex = 3;
             this.comboBox_TestAntenna.Text = "Port 0";
             // 
@@ -1244,7 +1244,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(23, 16);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(159, 12);
+            this.label28.Size = new System.Drawing.Size(158, 13);
             this.label28.TabIndex = 2;
             this.label28.Text = "Antenna Selection (MAC 0x113)";
             // 
@@ -1253,7 +1253,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(23, 161);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(104, 12);
+            this.label41.Size = new System.Drawing.Size(101, 13);
             this.label41.TabIndex = 4;
             this.label41.Text = "Power (MAC 0x114)";
             // 
@@ -1275,7 +1275,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.cb_withData.AutoSize = true;
             this.cb_withData.Location = new System.Drawing.Point(95, 97);
             this.cb_withData.Name = "cb_withData";
-            this.cb_withData.Size = new System.Drawing.Size(119, 16);
+            this.cb_withData.Size = new System.Drawing.Size(122, 17);
             this.cb_withData.TabIndex = 1;
             this.cb_withData.Text = "Transmit Data Mode";
             this.cb_withData.UseVisualStyleBackColor = true;
@@ -1342,7 +1342,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(182, 29);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(69, 12);
+            this.label40.Size = new System.Drawing.Size(70, 13);
             this.label40.TabIndex = 115;
             this.label40.Text = "Current value";
             // 
@@ -1360,7 +1360,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBoxLBTListeningTime.Location = new System.Drawing.Point(177, 129);
             this.textBoxLBTListeningTime.Name = "textBoxLBTListeningTime";
-            this.textBoxLBTListeningTime.Size = new System.Drawing.Size(75, 22);
+            this.textBoxLBTListeningTime.Size = new System.Drawing.Size(75, 20);
             this.textBoxLBTListeningTime.TabIndex = 113;
             // 
             // label38
@@ -1375,7 +1375,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBoxLBTListeningThreshold.Location = new System.Drawing.Point(177, 103);
             this.textBoxLBTListeningThreshold.Name = "textBoxLBTListeningThreshold";
-            this.textBoxLBTListeningThreshold.Size = new System.Drawing.Size(75, 22);
+            this.textBoxLBTListeningThreshold.Size = new System.Drawing.Size(75, 20);
             this.textBoxLBTListeningThreshold.TabIndex = 110;
             // 
             // label39
@@ -1390,35 +1390,35 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_MaxPowerCh6.Location = new System.Drawing.Point(460, 159);
             this.textBox_MaxPowerCh6.Name = "textBox_MaxPowerCh6";
-            this.textBox_MaxPowerCh6.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh6.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh6.TabIndex = 109;
             // 
             // textBox_MaxPowerCh5
             // 
             this.textBox_MaxPowerCh5.Location = new System.Drawing.Point(460, 133);
             this.textBox_MaxPowerCh5.Name = "textBox_MaxPowerCh5";
-            this.textBox_MaxPowerCh5.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh5.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh5.TabIndex = 108;
             // 
             // textBox_MaxPowerCh4
             // 
             this.textBox_MaxPowerCh4.Location = new System.Drawing.Point(460, 107);
             this.textBox_MaxPowerCh4.Name = "textBox_MaxPowerCh4";
-            this.textBox_MaxPowerCh4.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh4.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh4.TabIndex = 107;
             // 
             // textBox_MaxPowerCh3
             // 
             this.textBox_MaxPowerCh3.Location = new System.Drawing.Point(460, 81);
             this.textBox_MaxPowerCh3.Name = "textBox_MaxPowerCh3";
-            this.textBox_MaxPowerCh3.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh3.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh3.TabIndex = 106;
             // 
             // textBox_MaxPowerCh2
             // 
             this.textBox_MaxPowerCh2.Location = new System.Drawing.Point(460, 55);
             this.textBox_MaxPowerCh2.Name = "textBox_MaxPowerCh2";
-            this.textBox_MaxPowerCh2.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh2.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh2.TabIndex = 105;
             // 
             // label37
@@ -1426,7 +1426,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(428, 162);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(25, 12);
+            this.label37.Size = new System.Drawing.Size(26, 13);
             this.label37.TabIndex = 104;
             this.label37.Text = "Ch6";
             // 
@@ -1435,7 +1435,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(428, 136);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(25, 12);
+            this.label36.Size = new System.Drawing.Size(26, 13);
             this.label36.TabIndex = 103;
             this.label36.Text = "Ch5";
             // 
@@ -1444,7 +1444,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(428, 110);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(25, 12);
+            this.label35.Size = new System.Drawing.Size(26, 13);
             this.label35.TabIndex = 102;
             this.label35.Text = "Ch4";
             // 
@@ -1453,7 +1453,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(428, 84);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(25, 12);
+            this.label34.Size = new System.Drawing.Size(26, 13);
             this.label34.TabIndex = 101;
             this.label34.Text = "Ch3";
             // 
@@ -1462,7 +1462,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(428, 58);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(25, 12);
+            this.label33.Size = new System.Drawing.Size(26, 13);
             this.label33.TabIndex = 100;
             this.label33.Text = "Ch2";
             // 
@@ -1471,7 +1471,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(428, 32);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(25, 12);
+            this.label32.Size = new System.Drawing.Size(26, 13);
             this.label32.TabIndex = 99;
             this.label32.Text = "Ch1";
             // 
@@ -1479,7 +1479,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_TxOffTime.Location = new System.Drawing.Point(177, 74);
             this.textBox_TxOffTime.Name = "textBox_TxOffTime";
-            this.textBox_TxOffTime.Size = new System.Drawing.Size(75, 22);
+            this.textBox_TxOffTime.Size = new System.Drawing.Size(75, 20);
             this.textBox_TxOffTime.TabIndex = 98;
             // 
             // label31
@@ -1494,7 +1494,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_TxOnTime.Location = new System.Drawing.Point(177, 48);
             this.textBox_TxOnTime.Name = "textBox_TxOnTime";
-            this.textBox_TxOnTime.Size = new System.Drawing.Size(75, 22);
+            this.textBox_TxOnTime.Size = new System.Drawing.Size(75, 20);
             this.textBox_TxOnTime.TabIndex = 95;
             // 
             // label13
@@ -1510,7 +1510,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(361, 32);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(62, 12);
+            this.label30.Size = new System.Drawing.Size(61, 13);
             this.label30.TabIndex = 1;
             this.label30.Text = "Power Limit";
             // 
@@ -1518,7 +1518,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_MaxPowerCh1.Location = new System.Drawing.Point(460, 29);
             this.textBox_MaxPowerCh1.Name = "textBox_MaxPowerCh1";
-            this.textBox_MaxPowerCh1.Size = new System.Drawing.Size(75, 22);
+            this.textBox_MaxPowerCh1.Size = new System.Drawing.Size(75, 20);
             this.textBox_MaxPowerCh1.TabIndex = 0;
             // 
             // tp_engineering
@@ -1555,7 +1555,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(162, 79);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(60, 12);
+            this.label44.Size = new System.Drawing.Size(60, 13);
             this.label44.TabIndex = 8;
             this.label44.Text = "Raw (HEX)";
             // 
@@ -1564,7 +1564,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(48, 79);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(42, 12);
+            this.label47.Size = new System.Drawing.Size(43, 13);
             this.label47.TabIndex = 7;
             this.label47.Text = "Byte 28";
             // 
@@ -1593,7 +1593,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(162, 19);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(60, 12);
+            this.label46.Size = new System.Drawing.Size(60, 13);
             this.label46.TabIndex = 4;
             this.label46.Text = "Raw (HEX)";
             // 
@@ -1602,7 +1602,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(48, 19);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(42, 12);
+            this.label45.Size = new System.Drawing.Size(43, 13);
             this.label45.TabIndex = 3;
             this.label45.Text = "Byte 30";
             // 
@@ -1689,7 +1689,7 @@ namespace CS203_CALLBACK_API_DEMO
             "6 B"});
             this.comboBox_ifagc_gain_norm.Location = new System.Drawing.Point(195, 120);
             this.comboBox_ifagc_gain_norm.Name = "comboBox_ifagc_gain_norm";
-            this.comboBox_ifagc_gain_norm.Size = new System.Drawing.Size(135, 20);
+            this.comboBox_ifagc_gain_norm.Size = new System.Drawing.Size(135, 21);
             this.comboBox_ifagc_gain_norm.TabIndex = 11;
             // 
             // comboBox_iflna_gain_norm
@@ -1702,7 +1702,7 @@ namespace CS203_CALLBACK_API_DEMO
             "6 dB"});
             this.comboBox_iflna_gain_norm.Location = new System.Drawing.Point(195, 93);
             this.comboBox_iflna_gain_norm.Name = "comboBox_iflna_gain_norm";
-            this.comboBox_iflna_gain_norm.Size = new System.Drawing.Size(135, 20);
+            this.comboBox_iflna_gain_norm.Size = new System.Drawing.Size(135, 21);
             this.comboBox_iflna_gain_norm.TabIndex = 10;
             // 
             // comboBox_rflna_gain_norm
@@ -1714,7 +1714,7 @@ namespace CS203_CALLBACK_API_DEMO
             "13 dB"});
             this.comboBox_rflna_gain_norm.Location = new System.Drawing.Point(195, 66);
             this.comboBox_rflna_gain_norm.Name = "comboBox_rflna_gain_norm";
-            this.comboBox_rflna_gain_norm.Size = new System.Drawing.Size(135, 20);
+            this.comboBox_rflna_gain_norm.Size = new System.Drawing.Size(135, 21);
             this.comboBox_rflna_gain_norm.TabIndex = 9;
             this.comboBox_rflna_gain_norm.SelectedIndexChanged += new System.EventHandler(this.comboBox_rflna_gain_norm_SelectedIndexChanged);
             // 
@@ -1726,7 +1726,7 @@ namespace CS203_CALLBACK_API_DEMO
             "1"});
             this.comboBox_rflna_high_comp_norm.Location = new System.Drawing.Point(195, 39);
             this.comboBox_rflna_high_comp_norm.Name = "comboBox_rflna_high_comp_norm";
-            this.comboBox_rflna_high_comp_norm.Size = new System.Drawing.Size(135, 20);
+            this.comboBox_rflna_high_comp_norm.Size = new System.Drawing.Size(135, 21);
             this.comboBox_rflna_high_comp_norm.TabIndex = 8;
             // 
             // label52
@@ -1734,7 +1734,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(64, 69);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(84, 12);
+            this.label52.Size = new System.Drawing.Size(82, 13);
             this.label52.TabIndex = 7;
             this.label52.Text = "rflna_gain_norm";
             // 
@@ -1743,7 +1743,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(61, 123);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(85, 12);
+            this.label51.Size = new System.Drawing.Size(85, 13);
             this.label51.TabIndex = 6;
             this.label51.Text = "ifagc_gain_norm";
             // 
@@ -1752,7 +1752,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(65, 96);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(83, 12);
+            this.label50.Size = new System.Drawing.Size(81, 13);
             this.label50.TabIndex = 5;
             this.label50.Text = "iflna_gain_norm";
             this.label50.Click += new System.EventHandler(this.label50_Click);
@@ -1762,7 +1762,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label49.AutoSize = true;
             this.label49.Location = new System.Drawing.Point(32, 42);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(117, 12);
+            this.label49.Size = new System.Drawing.Size(114, 13);
             this.label49.TabIndex = 4;
             this.label49.Text = "rflna_high_comp_norm";
             // 
@@ -1771,7 +1771,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(389, 47);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(198, 12);
+            this.label48.Size = new System.Drawing.Size(200, 13);
             this.label48.TabIndex = 3;
             this.label48.Text = "0x0450 byPass raw value (hex read only)";
             // 
@@ -1779,7 +1779,7 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             this.textBox_rawValue.Location = new System.Drawing.Point(429, 65);
             this.textBox_rawValue.Name = "textBox_rawValue";
-            this.textBox_rawValue.Size = new System.Drawing.Size(135, 22);
+            this.textBox_rawValue.Size = new System.Drawing.Size(135, 20);
             this.textBox_rawValue.TabIndex = 2;
             // 
             // button3
@@ -1813,7 +1813,7 @@ namespace CS203_CALLBACK_API_DEMO
             0,
             0});
             this.nb_power.Name = "nb_power";
-            this.nb_power.Size = new System.Drawing.Size(97, 22);
+            this.nb_power.Size = new System.Drawing.Size(97, 20);
             this.nb_power.TabIndex = 61;
             this.nb_power.Visible = false;
             // 
@@ -1840,11 +1840,10 @@ namespace CS203_CALLBACK_API_DEMO
             // 
             // ts_status
             // 
-            this.ts_status.Location = new System.Drawing.Point(0, 309);
+            this.ts_status.Location = new System.Drawing.Point(5, 311);
             this.ts_status.Name = "ts_status";
-            this.ts_status.Size = new System.Drawing.Size(642, 24);
-            this.ts_status.TabIndex = 4;
-            this.ts_status.Text = "Status";
+            this.ts_status.Size = new System.Drawing.Size(631, 20);
+            this.ts_status.TabIndex = 83;
             // 
             // TagSettingForm
             // 
@@ -1852,9 +1851,9 @@ namespace CS203_CALLBACK_API_DEMO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(642, 333);
+            this.Controls.Add(this.ts_status);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btn_apply);
-            this.Controls.Add(this.ts_status);
             this.Controls.Add(this.lb_POWER);
             this.Controls.Add(this.nb_power);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1863,8 +1862,8 @@ namespace CS203_CALLBACK_API_DEMO
             this.Name = "TagSettingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup";
-            this.Load += new System.EventHandler(this.SettingForm_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TagSettingForm_FormClosing);
+            this.Load += new System.EventHandler(this.SettingForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp_gerenal.ResumeLayout(false);
             this.tp_gerenal.PerformLayout();
@@ -1903,6 +1902,7 @@ namespace CS203_CALLBACK_API_DEMO
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nb_power)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1929,7 +1929,6 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.CheckBox cb_fixed;
         private System.Windows.Forms.ComboBox cb_algorithm;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.StatusBar ts_status;
         private System.Windows.Forms.CheckBox cb_custInvtryCont;
         private System.Windows.Forms.ComboBox cb_freqlist;
         private System.Windows.Forms.Label label10;
@@ -2064,9 +2063,7 @@ namespace CS203_CALLBACK_API_DEMO
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox textBox_PreFilter_Bank;
         private System.Windows.Forms.Label label54;
-
-
-
+        private System.Windows.Forms.TextBox ts_status;
     }
 }
 

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classes xmlns="http://schemas.microsoft.com/VisualStudio/2004/03/SmartDevices/XMTA.xsd">
+  <Class Name="CSLibrary.Windows.RoundButton">
+    
+    <!-- <Class> -->
+    <ToolboxBitmap>CSLibrary.Windows.RoundButton</ToolboxBitmap>
+
+    <DefaultEvent>Click</DefaultEvent>
+
+    <DefaultProperty>Text</DefaultProperty>
+
+    <Description>Represents a button control.</Description>
+
+    <DesktopCompatible>true</DesktopCompatible>
+    
+    <DesignTimeVisible>true</DesignTimeVisible>
+
+    <!-- <Class> -->
+    
+    <!-- <Properties> -->
+    
+    <Property Name="BackColor">
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>ForestGreen</Value>
+      </DefaultValue>
+    </Property>
+    
+    <Property Name="ActiveBackColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>LightGreen</Value>
+      </DefaultValue>
+      <Description>The background color of the control in an active state.</Description>
+    </Property>
+
+    <Property Name="DisabledBackColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>Gray</Value>
+      </DefaultValue>
+      <Description>The background color of the control in a disabled state.</Description>
+    </Property>
+
+    <Property Name="BorderLineColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>Black</Value>
+      </DefaultValue>
+      <Description>The border line color of the control in an active state.</Description>
+    </Property>
+    
+    <Property Name="DisableBorderLineColor">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>Gray</Value>
+      </DefaultValue>
+      <Description>The border line color of the control in a disabled state..</Description>
+    </Property>
+    
+    <Property Name="DrawBorderLine">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        <Value>True</Value>
+      </DefaultValue>
+      <Description>Indicates whether the border line for the control should be drawn.</Description>
+    </Property>
+    
+    <Property Name="TextAlign">
+      <Category>Appearance</Category>
+      <DefaultValue>
+        <Type>System.Windows.Forms.HorizontalAlignment, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>Center</Value>
+      </DefaultValue>
+      <Description>Specifies how an object or text in a control is horizontally aligned relative to an element of the control.</Description>
+    </Property>
+
+    <Property Name="TextMargin">
+    <Category>Appearance</Category>
+    <DefaultValue>
+      <Type>System.Int32, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+      <Value>0</Value>
+    </DefaultValue>
+    <Description>Specifies how an object or text in a control is horizontally aligned relative to an element of the control.</Description>
+    </Property>
+    
+    <Property Name="Size">
+      <Localizable>true</Localizable>
+      <DefaultValue>
+        <Type>System.Drawing.Size, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Type>
+        <Value>120, 35</Value>
+      </DefaultValue>
+    </Property>
+    
+    <!-- <Properties> -->
+
+
+  </Class>
+</Classes>
