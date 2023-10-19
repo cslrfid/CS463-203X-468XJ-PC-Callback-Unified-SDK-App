@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1525
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{BF919A57-4920-4EDD-81A9-190224FF4EF1}"
 EndProject
@@ -16,63 +16,24 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x86 = Release|x86
-		VS2005 Release|Any CPU = VS2005 Release|Any CPU
-		VS2005 Release|x86 = VS2005 Release|x86
-		VS2008 Release|Any CPU = VS2008 Release|Any CPU
-		VS2008 Release|x86 = VS2008 Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7337347A-11B3-45F5-B63B-2372B97707B6}.Debug|Any CPU.ActiveCfg = Release|Any CPU
 		{7337347A-11B3-45F5-B63B-2372B97707B6}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.Debug|x86.ActiveCfg = Release|Any CPU
 		{7337347A-11B3-45F5-B63B-2372B97707B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7337347A-11B3-45F5-B63B-2372B97707B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.Release|x86.ActiveCfg = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2005 Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2005 Release|Any CPU.Build.0 = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2005 Release|x86.ActiveCfg = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2008 Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2008 Release|Any CPU.Build.0 = Release|Any CPU
-		{7337347A-11B3-45F5-B63B-2372B97707B6}.VS2008 Release|x86.ActiveCfg = Release|Any CPU
 		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Debug|Any CPU.ActiveCfg = VS2008 Release
 		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Debug|Any CPU.Build.0 = VS2008 Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Debug|x86.ActiveCfg = VS2008 Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Debug|x86.Build.0 = VS2008 Release
 		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Release|Any CPU.ActiveCfg = Release
 		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Release|Any CPU.Build.0 = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Release|x86.ActiveCfg = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.Release|x86.Build.0 = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2005 Release|Any CPU.ActiveCfg = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2005 Release|Any CPU.Build.0 = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2005 Release|x86.ActiveCfg = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2005 Release|x86.Build.0 = Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2008 Release|Any CPU.ActiveCfg = VS2008 Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2008 Release|Any CPU.Build.0 = VS2008 Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2008 Release|x86.ActiveCfg = VS2008 Release
-		{FFC18EC5-17BA-47FF-B875-7B4838633EE3}.VS2008 Release|x86.Build.0 = VS2008 Release
 		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.Release|x86.ActiveCfg = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2005 Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2005 Release|Any CPU.Build.0 = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2005 Release|x86.ActiveCfg = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2008 Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2008 Release|Any CPU.Build.0 = Release|Any CPU
-		{0BD97FF2-CF93-42E9-A1AB-DBC0FD7DD5EF}.VS2008 Release|x86.ActiveCfg = Release|Any CPU
 		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.Debug|Any CPU.ActiveCfg = Debug
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.Debug|x86.ActiveCfg = Debug
 		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.Release|Any CPU.ActiveCfg = Release
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.Release|x86.ActiveCfg = Release
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.VS2005 Release|Any CPU.ActiveCfg = Release
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.VS2005 Release|x86.ActiveCfg = Release
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.VS2008 Release|Any CPU.ActiveCfg = Release
-		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.VS2008 Release|x86.ActiveCfg = Release
+		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,7 +45,7 @@ Global
 		{C69D1459-EBC7-4EAA-9E19-F7882B36BC12} = {BF919A57-4920-4EDD-81A9-190224FF4EF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		SolutionGuid = {36FEF922-69E9-464E-B4AE-8F5310C3BED6}
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 EndGlobal
