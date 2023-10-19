@@ -249,7 +249,8 @@ namespace CSLibrary.Diagnostics.Targets
             {
                 for (int i = 0; i < Parameters.Count; ++i)
                 {
-                    sw.Write(Parameters[i].Name + "=" + System.Web.HttpUtility.UrlEncodeUnicode(Convert.ToString(parameters[i])) + ((i < (Parameters.Count - 1)) ? "&" : ""));
+                    //sw.Write(Parameters[i].Name + "=" + System.Web.HttpUtility.UrlEncodeUnicode(Convert.ToString(parameters[i])) + ((i < (Parameters.Count - 1)) ? "&" : ""));
+                    sw.Write(Parameters[i].Name + "=" + System.Net.WebUtility.UrlEncode(Convert.ToString(parameters[i])) + ((i < (Parameters.Count - 1)) ? "&" : ""));
                 }
                 sw.Flush();
             }
