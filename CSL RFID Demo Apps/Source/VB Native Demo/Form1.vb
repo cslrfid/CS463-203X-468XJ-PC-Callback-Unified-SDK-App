@@ -66,6 +66,15 @@ Public Class Form1
         dataBox.Text = ""
         AddHandler ReaderCE.OnAsyncCallback, AddressOf Me.ReaderCE_MyInventoryEvent
         AddHandler ReaderCE.OnStateChanged, AddressOf Me.ReaderCE_MyRunningStateEvent
+
+        'Only for CS203X reader, enable port 4 and then disable all other ports
+        If ReaderCE.OEMDeviceType = Machine.CS203X Then
+            ReaderCE.SetAntennaPortState(0, AntennaPortState.DISABLED)
+            ReaderCE.SetAntennaPortState(1, AntennaPortState.DISABLED)
+            ReaderCE.SetAntennaPortState(2, AntennaPortState.DISABLED)
+            ReaderCE.SetAntennaPortState(3, AntennaPortState.ENABLED)
+        End If
+
         ReaderCE.SetDynamicQParms(5, 0, 15, 0, 10, 1)
         ReaderCE.SetOperationMode(RadioOperationMode.CONTINUOUS)
         ReaderCE.Options.TagInventory.flags = CSLibrary.Constants.SelectFlags.ZERO
